@@ -1,9 +1,12 @@
 // Global
 
 @import "normalize.scss";
+@import "mixins.scss";
 @import "fonts.scss";
 @import "variables.scss";
-@import "mixins.scss";
 @import "global.scss";
+@import "visually-hidden.scss";
 
 // Blocks
+
+@import "header.scss";

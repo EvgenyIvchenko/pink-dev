@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 ul,
 ol,
 dl {
@@ -10,7 +16,30 @@ p {
   margin: 0;
 }
 
-a,
+a {
+  text-decoration: none;
+  color: unset;
+
+  &[href^="tel:"],
+  &[href^="mailto:"] {
+    font-variant-numeric: lining-nums;
+    white-space: nowrap;
+  }
+}
+
 button {
   cursor: pointer;
+}
+
+button,
+input {
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
