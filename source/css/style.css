@@ -338,6 +338,33 @@ template {
   display: none;
 }
 
+@font-face {
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  font-family: "Opensans";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-family: "Opensans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-family: "Opensans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 ul,
 ol,
 dl {
@@ -350,8 +377,51 @@ p {
   margin: 0;
 }
 
-a,
+a {
+  text-decoration: none;
+  color: unset;
+}
+a[href^="tel:"], a[href^="mailto:"] {
+  font-variant-numeric: lining-nums;
+  white-space: nowrap;
+}
+
 button {
   cursor: pointer;
+}
+
+button,
+input {
+  font-family: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.visually-hidden:not(:focus),
+input[type=checkbox].visually-hidden,
+input[type=radio].visually-hidden {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+.page__body {
+  font-family: OpenSans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */
