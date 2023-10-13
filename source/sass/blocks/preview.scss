@@ -1,11 +1,36 @@
-.preview {}
+.preview {
+  background-color: $color-bg-download;
+}
 
-.preview__slogan {}
+.preview__slogan {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 120%;
+  color: $color-alternate;
+  // background-image: url("../img/nav-backgroud-mobile.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+}
 
-.preview__download {}
+.preview__download {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-alternate;
+  margin-bottom: 32px;
+}
 
 .preview__list {}
 
-.preview__item {}
+.preview__item {
+  padding: 0 35px;
+  margin-bottom: 28px;
+}
 
-.preview__caption {}
+.preview__caption {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 38px;
+  color: $color-alternate;
+}

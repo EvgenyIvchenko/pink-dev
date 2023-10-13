@@ -1,5 +1,21 @@
-.advantage {}
-.advantage__title {}
+.advantage {
+  
+  &:first-child {
+    padding-top: 54px;
+  }
+
+  &:last-child {
+    margin-bottom: 48px;
+  }
+}
+
+.advantage__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $color-heading;
+  margin-bottom: 24px;
+}
 
 .advantage__image {}
 

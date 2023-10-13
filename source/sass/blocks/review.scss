@@ -1,7 +1,21 @@
-.review {}
+.review {
+  padding-top: 50px;
+}
 
-.review__comment {}
+.review__comment {
+  line-height: 30px;
+  margin-bottom: 44px;
+  padding: 0 20px;
+}
 
-.review__name {}
+.review__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-heading;
+  margin-bottom: 30px;
+}
 
-.review__age {}
+.review__age {
+  line-height: 30px;
+}

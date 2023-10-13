@@ -1,5 +1,41 @@
-.price {}
+.price {
+  padding-top: 82px;
+  color: $color-alternate;
+  background-color: $color-bg-alternate;
 
-.price__table {}
+  & th {
+    background-color: $color-main;
+    padding: 19px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+  }
 
-.price__dots {}
+  & th:first-child {
+    background-color: transparent;
+  }
+
+  & td {
+    color: $color-main;
+    padding: 18px;
+    background-color: $color-alternate;
+    line-height: 30px;
+  }
+
+  & span {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+}
+
+.price__table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  margin-bottom: 44px;
+}
+
+.price__dots {
+  padding-bottom: 50px;
+  color: black;
+}

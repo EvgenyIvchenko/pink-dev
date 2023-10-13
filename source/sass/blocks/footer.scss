@@ -1,17 +1,33 @@
-.footer {}
+.footer {
+  background-color: $color-alternate;
+  padding: 40px ;
+}
 
-.footer__logo {}
+.footer__logo {
+  margin-bottom: 40px;
+}
 
-.footer__logo-image {}
+.footer__logo-image {
+  margin-bottom: 12px;
+}
 
 .footer__logo-text {}
 
-.footer__list {}
+.footer__list {
+  margin: -7px;
+  margin-bottom: 47px;
+}
 
-.footer__item {}
+.footer__item {
+  padding: 7px;
+}
 
 .footer__link {}
 
-.footer__academy {}
+.footer__academy {
+  line-height: 18px;
+}
 
-.footer__academy-link {}
+.footer__academy-link {
+  padding-left: 15px;
+}

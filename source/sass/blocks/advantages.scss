@@ -1,10 +1,22 @@
 .advantages {}
 
-.advantages__title {}
+.advantages__title {
+  background-color: $color-alternate;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 120%;
+  padding: 46px 20px 0;
+  margin-bottom: 70px;
+}
 
-.advantages__list {}
+.advantages__list {
+  background-color: $color-bg-alternate;
+}
 
-.advantages__item {}
+.advantages__item {
+  padding: 0 20px;
+  margin-bottom: 44px;
+}
 
 .advantages__image {}
 

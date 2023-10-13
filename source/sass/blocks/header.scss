@@ -1,5 +1,12 @@
 .header {}
 
-.header__logo {}
+.header__logo {
+  display: block;
+  background-color: $color-heading;
+  padding: 20px;
+  opacity: 0.3;
+}
 
-.header__nav {}
+.header__nav {
+  background-color: $color-main;
+}

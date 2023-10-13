@@ -1,7 +1,28 @@
-.button {}
+.button {
+  padding: 22px;
+}
 
-.button--first {}
+.button--first {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-alternate;
+  padding: 28px 20px 0px;
+  background-color: transparent;
+}
 
-.button--second {}
+.button--second {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: $color-accent;
+  background-color: $color-alternate;
+}
 
-.button--third {}
+.button--third {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  color: $color-alternate;
+  background-color: $color-button-form;
+}

@@ -1,6 +1,8 @@
 .nav {}
 
-.nav__toggle {}
+.nav__toggle {
+  padding: 20px;
+}
 
 .nav__wrapper {}
 
@@ -8,4 +10,10 @@
 
 .nav__item {}
 
-.nav__link {}
+.nav__link {
+  color: $color-alternate;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  padding: 26px 88px;
+}

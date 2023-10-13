@@ -1,5 +1,10 @@
+.page {}
+
 .page__body {
-  font-family: OpenSans, sans-serif;
-  font-weight: 400;
+  font-family: Open Sans, sans-serif;
   font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $color-main;
 }
