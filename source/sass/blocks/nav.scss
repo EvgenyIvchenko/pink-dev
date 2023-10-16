@@ -8,12 +8,13 @@
 
 .nav__list {}
 
-.nav__item {}
+.nav__item {
+  padding: 26px 88px;
+}
 
 .nav__link {
   color: $color-alternate;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
-  padding: 26px 88px;
 }

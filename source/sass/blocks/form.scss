@@ -1,12 +1,15 @@
 .form {}
 
-.form__list {}
+.form__list {
+  padding: 0 22px 44px;
+}
 
-.form__item {}
-
-.form__label {}
-
-.form__input {}
+.form__item {
+  
+  &:not(:last-child) {
+    margin-bottom: 28px;
+  }
+}
 
 .form__fieldset-wrapper {}
 
@@ -16,4 +19,11 @@
 
 .form__submit {}
 
-.form__required {}
+.form__required {
+  line-height: 30px;
+  text-transform: uppercase;
+
+  & span {
+    color: $color-accent;
+  }
+}

@@ -1,4 +1,5 @@
 .preview {
+  padding: 30px 20px 38px;
   background-color: $color-bg-download;
 }
 
@@ -7,6 +8,7 @@
   font-weight: 300;
   line-height: 120%;
   color: $color-alternate;
+  padding: 0 20px;
   // background-image: url("../img/nav-backgroud-mobile.jpg");
   // background-repeat: no-repeat;
   // background-position: center;
@@ -17,10 +19,14 @@
   font-weight: 700;
   line-height: 18px;
   color: $color-alternate;
+  padding: 28px 20px 0;
   margin-bottom: 32px;
 }
 
-.preview__list {}
+.preview__list {
+  margin-bottom: 28px;
+  padding: 0 58px;
+}
 
 .preview__item {
   padding: 0 35px;
@@ -31,6 +37,6 @@
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
-  margin-bottom: 38px;
   color: $color-alternate;
+  padding: 0 20px;
 }

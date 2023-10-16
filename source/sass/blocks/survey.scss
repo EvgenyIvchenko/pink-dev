@@ -1,5 +1,11 @@
-.survey {}
+.survey {
+  background-color: $color-alternate;
+}
 
-.survey__slogan {}
+.survey__slogan {
+  line-height: 30px;
+  padding: 54px 20px 0;
+  margin-bottom: 54px;
+}
 
 .survey__form {}

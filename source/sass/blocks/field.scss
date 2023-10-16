@@ -4,14 +4,32 @@
 
 .field--alternate {}
 
-.field--radio {}
+.field--radio {
+  font-size: 18px;
+  line-height: 30px;
+}
 
-.field--checkbox {}
+.field--checkbox {
+  font-size: 18px;
+  line-height: 30px;
+}
 
 .field__item-wrapper {}
 
-.field__input {}
+.field__label {
+  line-height: 30px;
+  color: $color-accent;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
 
-.field__label {}
+.field__input {
+  padding: 22px 20px;
+  
+  &::placeholder {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
 
 .field__checkbox {}

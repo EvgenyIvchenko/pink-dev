@@ -405,7 +405,9 @@ img {
 
 h1,
 h2,
-h3 {
+h3,
+fieldset,
+legend {
   padding: 0;
   margin: 0;
 }
@@ -554,6 +556,83 @@ input[type=radio].visually-hidden {
   color: #d22856;
 }
 
+.editor {
+  padding: 20px 20px 40px;
+  background-color: #f2f2f2;
+}
+
+.editor__image {
+  margin-bottom: 42px;
+}
+
+.editor__list {
+  margin-bottom: 72px;
+}
+
+.editor__item {
+  margin-bottom: 40px;
+}
+.editor__item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.editor__submit {
+  margin-bottom: 12px;
+}
+
+.field--radio {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.field--checkbox {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.field__label {
+  line-height: 30px;
+  color: #d22856;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.field__input {
+  padding: 22px 20px;
+}
+.field__input::placeholder {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.fieldset-grey {
+  background-color: #f2f2f2;
+}
+
+.fieldset {
+  padding: 42px 22px;
+}
+
+.fieldset__legend {
+  line-height: 18px;
+  color: #d22856;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+.fieldset__legend:last-child {
+  margin-bottom: 22px;
+}
+
+.fieldset__item:not(:last-child) {
+  margin-bottom: 66px;
+}
+
+.fieldset__message::placeholder {
+  font-size: 18px;
+  line-height: 30px;
+  padding: 22px;
+}
+
 .footer {
   background-color: #ffffff;
   padding: 40px;
@@ -584,10 +663,32 @@ input[type=radio].visually-hidden {
   padding-left: 15px;
 }
 
+.form__list {
+  padding: 0 22px 44px;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.form__required {
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.form__required span {
+  color: #d22856;
+}
+
+.gallery__slogan {
+  padding: 54px 20px 60px;
+  line-height: 30px;
+  background-color: #ffffff;
+}
+
 .header__logo {
   display: block;
-  background-color: #000000;
   padding: 20px;
+  background-color: #000000;
   opacity: 0.3;
 }
 
@@ -595,8 +696,21 @@ input[type=radio].visually-hidden {
   background-color: #283645;
 }
 
+.main__title {
+  padding-top: 37px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: #ffffff;
+  background-color: grey;
+}
+
 .nav__toggle {
   padding: 20px;
+}
+
+.nav__item {
+  padding: 26px 88px;
 }
 
 .nav__link {
@@ -604,7 +718,6 @@ input[type=radio].visually-hidden {
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
-  padding: 26px 88px;
 }
 
 .page__body {
@@ -616,7 +729,46 @@ input[type=radio].visually-hidden {
   color: #283645;
 }
 
+.post {
+  background-color: #ffffff;
+}
+
+.post__wrapper {
+  background-color: #f2f2f2;
+  padding: 24px 10px 16px;
+}
+
+.post__user-name {
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.post__user-name span {
+  font-style: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.post__text {
+  margin-bottom: 24px;
+}
+
+.post__likes-count {
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+.post__of-the-day {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 14px 20px;
+  background-color: #d22856;
+}
+
 .preview {
+  padding: 30px 20px 38px;
   background-color: #1d2631;
 }
 
@@ -625,6 +777,7 @@ input[type=radio].visually-hidden {
   font-weight: 300;
   line-height: 120%;
   color: #ffffff;
+  padding: 0 20px;
 }
 
 .preview__download {
@@ -632,7 +785,13 @@ input[type=radio].visually-hidden {
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
+  padding: 28px 20px 0;
   margin-bottom: 32px;
+}
+
+.preview__list {
+  margin-bottom: 28px;
+  padding: 0 58px;
 }
 
 .preview__item {
@@ -644,8 +803,8 @@ input[type=radio].visually-hidden {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
-  margin-bottom: 38px;
   color: #ffffff;
+  padding: 0 20px;
 }
 
 .price {
@@ -710,5 +869,23 @@ input[type=radio].visually-hidden {
 
 .reviews {
   background-color: #ffffff;
+}
+
+.survey {
+  background-color: #ffffff;
+}
+
+.survey__slogan {
+  line-height: 30px;
+  padding: 54px 20px 0;
+  margin-bottom: 54px;
+}
+
+.upload {
+  background-color: #ffffff;
+}
+
+.upload__slogan {
+  padding: 50px 20px;
 }
 /*# sourceMappingURL=style.css.map */

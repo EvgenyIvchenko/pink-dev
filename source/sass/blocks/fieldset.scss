@@ -1,11 +1,34 @@
-.fieldset {}
+.fieldset {
+  padding: 42px 22px;
+}
 
-.fieldset__legend {}
+.fieldset__legend {
+  line-height: 18px;
+  color: $color-accent;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+
+  &:last-child {
+    margin-bottom: 22px;
+  }
+}
 
 .fieldset__list {}
 
-.fieldset__item {}
+.fieldset__item {
+
+  &:not(:last-child) {
+    margin-bottom: 66px;
+  }
+}
 
 .fieldset__message-wrapper {}
 
-.fieldset__message {}
+.fieldset__message {
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 22px;
+  }
+}

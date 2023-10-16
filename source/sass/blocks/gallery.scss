@@ -1,6 +1,10 @@
 .gallery {}
 
-.gallery__slogan {}
+.gallery__slogan {
+  padding: 54px 20px 60px;
+  line-height: 30px;
+  background-color: $color-alternate;
+}
 
 .gallery__big-post {}
 

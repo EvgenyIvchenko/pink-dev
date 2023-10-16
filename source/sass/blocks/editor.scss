@@ -1,10 +1,23 @@
-.editor {}
+.editor {
+  padding: 20px 20px 40px;
+  background-color: $color-bg-alternate;
+}
 
-.editor__image {}
+.editor__image {
+  margin-bottom: 42px;
+}
 
-.editor__list {}
+.editor__list {
+  margin-bottom: 72px;
+}
 
-.editor__item {}
+.editor__item {
+  margin-bottom: 40px;
+  
+    &:not(:last-child) {
+      margin-right: 36px;
+    }
+}
 
 .editor__toggle {}
 
@@ -12,6 +25,8 @@
 
 .editor__buttons {}
 
-.editor__submit {}
+.editor__submit {
+  margin-bottom: 12px;
+}
 
 .editor__reset {}

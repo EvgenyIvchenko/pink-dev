@@ -1,17 +1,46 @@
-.post {}
+.post {
+  background-color: $color-alternate;
+}
 
 .post--big {}
 
 .post__image {}
 
-.post__wrapper {}
+.post__wrapper {
+  background-color: $color-bg-alternate;
+  padding: 24px 10px 16px;
+}
 
-.post__user-name {}
+.post__user-name {
+  font-weight: 700;
+  margin-bottom: 14px;
 
-.post__text {}
+    & span {
+      font-style: 12px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+}
+
+.post__text {
+  margin-bottom: 24px;
+}
 
 .post__likes-wrapper {}
 
 .post__likes-toggle {}
 
-.post__likes-count {}
+.post__likes-count {
+  color: $color-accent;
+  text-transform: uppercase;
+}
+
+.post__of-the-day {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $color-alternate;
+  padding: 14px 20px;
+  background-color: $color-accent;
+}

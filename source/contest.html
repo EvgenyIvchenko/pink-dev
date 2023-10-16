@@ -64,8 +64,8 @@
         <form class="survey__form form">
           <ul class="form__list">
             <li class="form__item field field--main">
-              <label class="form__label" for="lastname">Фамилия:</label>
-              <input class="form__input" id="lastname" type="text" name="lastname" placeholder="Укажите фамилию *">
+              <label class="field__label" for="lastname">Фамилия:</label>
+              <input class="field__input" id="lastname" type="text" name="lastname" placeholder="Укажите фамилию *">
             </li>
             <li class="form__item field field--main">
               <label class="field__label" for="firstname">Имя:</label>
@@ -78,7 +78,7 @@
           </ul>
 
           <div class="form__fieldset-wrapper">
-            <fieldset class="form__fieldset fieldset">
+            <fieldset class="form__fieldset fieldset fieldset-grey">
               <legend class="fieldset__legend">С каким приложением путешествовали?</legend>
 
               <ul class="fieldset__list">
@@ -103,14 +103,14 @@
               <ul class="fieldset__list">
                 <li class="fieldset__item field field--alternate">
                   <div class="field__item-wrapper">
-                    <input class="field__input" id="phone" type="tel" name="phone">
+                    <input class="field__input" id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
                     <!-- иконка -->
                   </div>
                   <label class="field__label" for="phone">Номер телефона</label>
                 </li>
                 <li class="fieldset__item field field--alternate">
                   <div class="field__item-wrapper">
-                    <input class="field__input" id="email" type="email" name="email">
+                    <input class="field__input" id="email" type="email" name="email" placeholder="Введите почту *">
                     <!-- иконка -->
                   </div>
                   <label class="field__label" for="email">Адрес почты</label>
@@ -118,7 +118,7 @@
               </ul>
             </fieldset>
 
-            <fieldset class="form__fieldset fieldset">
+            <fieldset class="form__fieldset fieldset fieldset-grey">
               <legend class="fieldset__legend">Ваши безбашенные достижения в путешествии</legend>
 
               <ul class="fieldset__list">
@@ -150,7 +150,7 @@
             </fieldset>
 
             <fieldset class="form__fieldset fieldset">
-              <legend class="fieldset__legend">Опишите своей эмоции</legend>
+              <legend class="fieldset__legend">Опишите свои эмоции</legend>
 
               <div class="fieldset__message-wrapper">
                 <textarea class="fieldset__message" id="emotion" name="emotion" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>

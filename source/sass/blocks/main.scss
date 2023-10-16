@@ -1,7 +1,18 @@
 .main {}
 
-.main__wrapper {}
+.main__wrapper {
+  // background-image: url("../img/nav-backgroud-mobile.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center;
+}
 
-.main__title {}
+.main__title {
+  padding-top: 37px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
+  color: $color-alternate;
+  background-color: grey;
+}
 
 .main__survey {}
