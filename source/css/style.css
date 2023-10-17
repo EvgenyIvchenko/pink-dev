@@ -412,22 +412,6 @@ legend {
   margin: 0;
 }
 
-.visually-hidden:not(:focus),
-input[type=checkbox].visually-hidden,
-input[type=radio].visually-hidden {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
-}
-
 .advantage:first-child {
   padding-top: 54px;
 }
@@ -495,7 +479,7 @@ input[type=radio].visually-hidden {
 }
 
 .button {
-  padding: 22px;
+  padding: 20px;
 }
 
 .button--first {
@@ -610,7 +594,7 @@ input[type=radio].visually-hidden {
 }
 
 .fieldset {
-  padding: 42px 22px;
+  border: none;
 }
 
 .fieldset__legend {
@@ -627,6 +611,9 @@ input[type=radio].visually-hidden {
   margin-bottom: 66px;
 }
 
+.fieldset__message {
+  padding: 0;
+}
 .fieldset__message::placeholder {
   font-size: 18px;
   line-height: 30px;
@@ -671,6 +658,14 @@ input[type=radio].visually-hidden {
   margin-bottom: 28px;
 }
 
+.form__single-wrapper {
+  padding: 52px 22px;
+}
+
+.form__submit-wrapper {
+  padding: 0 20px;
+}
+
 .form__required {
   line-height: 30px;
   text-transform: uppercase;
@@ -697,12 +692,27 @@ input[type=radio].visually-hidden {
 }
 
 .main__title {
-  padding-top: 37px;
+  padding-top: 36px;
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
   color: #ffffff;
   background-color: grey;
+}
+
+.modal {
+  padding: 44px 20px 52px;
+}
+
+.modal__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 36px;
+}
+
+.modal__text {
+  margin-bottom: 50px;
 }
 
 .nav__toggle {
@@ -887,5 +897,21 @@ input[type=radio].visually-hidden {
 
 .upload__slogan {
   padding: 50px 20px;
+}
+
+.visually-hidden:not(:focus),
+input[type=checkbox].visually-hidden,
+input[type=radio].visually-hidden {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
 }
 /*# sourceMappingURL=style.css.map */

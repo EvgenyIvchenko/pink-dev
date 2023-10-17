@@ -1,10 +1,19 @@
-.modal {}
+.modal {
+  padding: 44px 20px 52px;
+}
 
 .modal__top-wrapper {}
 
-.modal__title {}
+.modal__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-heading;
+  margin-bottom: 36px;
+}
 
-.modal__text {}
+.modal__text {
+  margin-bottom: 50px;
+}
 
 .modal__bottom-wrapper {}
 

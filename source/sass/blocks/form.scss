@@ -13,9 +13,15 @@
 
 .form__fieldset-wrapper {}
 
+.form__single-wrapper {
+  padding: 52px 22px;
+}
+
 .form__fieldset {}
 
-.form__submit-wrapper {}
+.form__submit-wrapper {
+  padding: 0 20px;
+}
 
 .form__submit {}
 

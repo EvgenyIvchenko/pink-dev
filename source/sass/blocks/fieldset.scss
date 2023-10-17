@@ -1,5 +1,5 @@
 .fieldset {
-  padding: 42px 22px;
+  border: none;
 }
 
 .fieldset__legend {
@@ -25,6 +25,7 @@
 .fieldset__message-wrapper {}
 
 .fieldset__message {
+  padding: 0;
 
   &::placeholder {
     font-size: 18px;
