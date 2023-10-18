@@ -4,17 +4,19 @@
   background-color: $color-bg-download;
 }
 
+.preview__image-wrapper {
+  margin-bottom: 28px;
+}
+
 .preview__slogan {
   font-size: 24px;
   font-weight: 300;
   line-height: 120%;
   color: $color-alternate;
-  // background-image: url("../img/nav-backgroud-mobile.jpg");
-  // background-repeat: no-repeat;
-  // background-position: center;
 }
 
 .preview__download {
+  display: block;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;

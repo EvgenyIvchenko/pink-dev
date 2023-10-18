@@ -518,7 +518,6 @@ input[type=radio].visually-hidden {
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
-  padding: 28px 20px 0px;
   background-color: transparent;
 }
 
@@ -725,7 +724,7 @@ input[type=radio].visually-hidden {
 }
 
 .main__wrapper {
-  background-image: url("../img/nav-backgroud-mobile.jpg");
+  background-image: url("../img/main-wrapper-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -735,8 +734,6 @@ input[type=radio].visually-hidden {
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
-  color: #ffffff;
-  background-color: grey;
 }
 
 .modal {
@@ -814,6 +811,10 @@ input[type=radio].visually-hidden {
   background-color: #1d2631;
 }
 
+.preview__image-wrapper {
+  margin-bottom: 28px;
+}
+
 .preview__slogan {
   font-size: 24px;
   font-weight: 300;
@@ -822,6 +823,7 @@ input[type=radio].visually-hidden {
 }
 
 .preview__download {
+  display: block;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
