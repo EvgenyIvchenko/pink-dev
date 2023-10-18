@@ -6,6 +6,10 @@
 
 .post__image {}
 
+.post__image-container {}
+
+.post__big-wrapper {}
+
 .post__wrapper {
   background-color: $color-bg-alternate;
   padding: 24px 10px 16px;
@@ -41,6 +45,6 @@
   line-height: 24px;
   text-transform: uppercase;
   color: $color-alternate;
-  padding: 14px 20px;
+  padding-top: 14px;
   background-color: $color-accent;
 }

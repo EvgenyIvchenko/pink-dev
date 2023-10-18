@@ -12,11 +12,11 @@
 
   <body class="page__body">
     <header class="header">
-      <a class="header__logo">
+      <a class="header__logo container">
         <img src="./img/header-logo-mobile.svg" width="74" height="23" alt="Приложение PINK">
       </a>
 
-      <nav class="header__nav nav">
+      <nav class="header__nav nav container">
         <button class="nav__toggle">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -56,95 +56,105 @@
       <section class="gallery">
         <h2 class="visually-hidden">Оцените фото</h2>
 
-        <p class="gallery__slogan">
-          Взгляните на фотографии, которые выкладывают пользователи!
-          Видите, как не хватает ваших?
-        </p>
-
-        <div class="gallery__big-post post post--big">
-          <img class="post__image" src="./img/catalog-panorama-mobile.jpg" width="320" height="137" alt="Панорама моста">
-          <div class="post__wrapper">
-            <p class="post__user-name">Анна <span>(5 минут назад)</span></p>
-            <p class="post__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <div class="post__likes-wrapper">
-              <button class="post__likes-toggle" type="button">like</button>
-                <span class="visually-hidden">Поставить лайк</span>
-                <!-- иконка -->
-              </button>
-              <p class="post__likes-count">Нравится: 215</p>
-            </div>
-          </div>
-          <div class="post__of-the-day">Панорама дня</div>
+        <div class="gallery__top-container container">
+          <p class="gallery__slogan">
+            Взгляните на фотографии, которые выкладывают пользователи!
+            Видите, как не хватает ваших?
+          </p>
         </div>
 
-        <ul class="gallery__list">
-          <li class="gallery__item post">
-            <img class="post__image" src="./img/catalog-white-car-mobile.jpg" width="280" height="180" alt="Белый автомобиль">
+        <div class="gallery__big-post post post--big">
+          <div class="post__image-wrapper">
+            <img class="post__image" src="./img/catalog-panorama-mobile.jpg" width="320" height="137" alt="Панорама моста">
+            <div class="post__image-container container">
+              <p class="post__of-the-day">Панорама дня</p>
+          </div>
+
+          <div class="post__container container">
             <div class="post__wrapper">
-              <p class="post__user-name">Левон <span>(5 часов назад)</span></p>
-              <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="post__user-name">Анна <span>(5 минут назад)</span></p>
+              <p class="post__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
               <div class="post__likes-wrapper">
                 <button class="post__likes-toggle" type="button">like</button>
-                <p class="post__likes-count">Нравится: 356</p>
-              </div>
-            </div>
-          </li>
-          <li class="gallery__item post">
-            <img class="post__image" src="./img/catalog-drums-mobile.jpg" width="280" height="180" alt="Ударная установка">
-            <div class="post__wrapper">
-              <p class="post__user-name">Антон <span>(12 часов назад)</span></p>
-              <p class="post__text">Соседи будут рады!</p>
-              <div class="post__likes-wrapper">
-                <button class="post__likes-toggle" type="button">like</button>
-                <p class="post__likes-count">Нравится: 666</p>
-              </div>
-            </div>
-          </li>
-          <li class="gallery__item post">
-            <img class="post__image" src="./img/catalog-sky-mobile.jpg" width="280" height="180" alt="Небо">
-            <div class="post__wrapper">
-              <p class="post__user-name">Борис <span>(20 часов назад)</span></p>
-              <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <div class="post__likes-wrapper">
-                <button class="post__likes-toggle" type="button">like</button>
+                  <span class="visually-hidden">Поставить лайк</span>
+                  <!-- иконка -->
+                </button>
                 <p class="post__likes-count">Нравится: 215</p>
               </div>
             </div>
-          </li>
-          <li class="gallery__item post">
-            <img class="post__image" src="./img/catalog-watermelons-mobile.jpg" width="280" height="180" alt="Кубанская бахча">
-            <div class="post__wrapper">
-              <p class="post__user-name">Сергей <span>(25 часов назад)</span></p>
-              <p class="post__text">Самая кубанская в мире!</p>
-              <div class="post__likes-wrapper">
-                <button class="post__likes-toggle" type="button">like</button>
-                <p class="post__likes-count">Нравится: 4</p>
+          </div>
+        </div>
+
+        <div class="gallery__post-container container">
+          <ul class="gallery__list">
+            <li class="gallery__item post">
+              <img class="post__image" src="./img/catalog-white-car-mobile.jpg" width="280" height="180" alt="Белый автомобиль">
+              <div class="post__wrapper">
+                <p class="post__user-name">Левон <span>(5 часов назад)</span></p>
+                <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <div class="post__likes-wrapper">
+                  <button class="post__likes-toggle" type="button">like</button>
+                  <p class="post__likes-count">Нравится: 356</p>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="gallery__item post">
-            <img class="post__image" src="./img/catalog-legs-mobile.jpg" width="280" height="180" alt="Склон горы">
-            <div class="post__wrapper">
-              <p class="post__user-name">Максим <span>(40 часов назад)</span></p>
-              <p class="post__text">Где снег-то?</p>
-              <div class="post__likes-wrapper">
-                <button class="post__likes-toggle" type="button">like</button>
-                <p class="post__likes-count">Нравится: 150</p>
+            </li>
+            <li class="gallery__item post">
+              <img class="post__image" src="./img/catalog-drums-mobile.jpg" width="280" height="180" alt="Ударная установка">
+              <div class="post__wrapper">
+                <p class="post__user-name">Антон <span>(12 часов назад)</span></p>
+                <p class="post__text">Соседи будут рады!</p>
+                <div class="post__likes-wrapper">
+                  <button class="post__likes-toggle" type="button">like</button>
+                  <p class="post__likes-count">Нравится: 666</p>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="gallery__item post">
-            <img class="post__image" src="./img/catalog-airplane-wing-mobile.jpg" width="280" height="180" alt="Крыло самолёта">
-            <div class="post__wrapper">
-              <p class="post__user-name">Надежда <span>(45 часов назад)</span></p>
-              <p class="post__text">Где снег-то?</p>
-              <div class="post__likes-wrapper">
-                <button class="post__likes-toggle" type="button">like</button>
-                <p class="post__likes-count">Нравится: 2560</p>
+            </li>
+            <li class="gallery__item post">
+              <img class="post__image" src="./img/catalog-sky-mobile.jpg" width="280" height="180" alt="Небо">
+              <div class="post__wrapper">
+                <p class="post__user-name">Борис <span>(20 часов назад)</span></p>
+                <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <div class="post__likes-wrapper">
+                  <button class="post__likes-toggle" type="button">like</button>
+                  <p class="post__likes-count">Нравится: 215</p>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li class="gallery__item post">
+              <img class="post__image" src="./img/catalog-watermelons-mobile.jpg" width="280" height="180" alt="Кубанская бахча">
+              <div class="post__wrapper">
+                <p class="post__user-name">Сергей <span>(25 часов назад)</span></p>
+                <p class="post__text">Самая кубанская в мире!</p>
+                <div class="post__likes-wrapper">
+                  <button class="post__likes-toggle" type="button">like</button>
+                  <p class="post__likes-count">Нравится: 4</p>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item post">
+              <img class="post__image" src="./img/catalog-legs-mobile.jpg" width="280" height="180" alt="Склон горы">
+              <div class="post__wrapper">
+                <p class="post__user-name">Максим <span>(40 часов назад)</span></p>
+                <p class="post__text">Где снег-то?</p>
+                <div class="post__likes-wrapper">
+                  <button class="post__likes-toggle" type="button">like</button>
+                  <p class="post__likes-count">Нравится: 150</p>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item post">
+              <img class="post__image" src="./img/catalog-airplane-wing-mobile.jpg" width="280" height="180" alt="Крыло самолёта">
+              <div class="post__wrapper">
+                <p class="post__user-name">Надежда <span>(45 часов назад)</span></p>
+                <p class="post__text">Где снег-то?</p>
+                <div class="post__likes-wrapper">
+                  <button class="post__likes-toggle" type="button">like</button>
+                  <p class="post__likes-count">Нравится: 2560</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="upload">

@@ -6,6 +6,12 @@
 @import "variables.scss";
 @import "global.scss";
 
+// Supporting
+
+@import "blocks/page.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/container.scss";
+
 // Blocks
 
 @import "blocks/advantage.scss";
@@ -24,7 +30,6 @@
 @import "blocks/main.scss";
 @import "blocks/modal.scss";
 @import "blocks/nav.scss";
-@import "blocks/page.scss";
 @import "blocks/post.scss";
 @import "blocks/preview.scss";
 @import "blocks/price.scss";
@@ -34,4 +39,3 @@
 @import "blocks/slider-button.scss";
 @import "blocks/survey.scss";
 @import "blocks/upload.scss";
-@import "blocks/visually-hidden.scss";

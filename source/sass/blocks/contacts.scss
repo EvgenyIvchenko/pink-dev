@@ -3,14 +3,16 @@
 }
 
 .contacts__title {
-  padding: 50px 50px 0 50px;
+  padding: 50px 20px 0;
   margin-bottom: 45px;
   font-size: 24px;
   font-weight: 300;
   line-height: 120%;
 }
 
-.contacts__list {}
+.contacts__list {
+  padding: 0 20px;
+}
 
 .contacts__item {
   margin-bottom: 30px;

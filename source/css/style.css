@@ -412,6 +412,37 @@ legend {
   margin: 0;
 }
 
+.page__body {
+  font-family: Open Sans, sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #283645;
+}
+
+.visually-hidden:not(:focus),
+input[type=checkbox].visually-hidden,
+input[type=radio].visually-hidden {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .advantage:first-child {
   padding-top: 54px;
 }
@@ -512,11 +543,15 @@ legend {
 }
 
 .contacts__title {
-  padding: 50px 50px 0 50px;
+  padding: 50px 20px 0;
   margin-bottom: 45px;
   font-size: 24px;
   font-weight: 300;
   line-height: 120%;
+}
+
+.contacts__list {
+  padding: 0 20px;
 }
 
 .contacts__item {
@@ -582,7 +617,7 @@ legend {
 }
 
 .field__input {
-  padding: 22px 20px;
+  padding-top: 22px;
 }
 .field__input::placeholder {
   font-size: 18px;
@@ -617,7 +652,8 @@ legend {
 .fieldset__message::placeholder {
   font-size: 18px;
   line-height: 30px;
-  padding: 22px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
 
 .footer {
@@ -651,7 +687,7 @@ legend {
 }
 
 .form__list {
-  padding: 0 22px 44px;
+  padding-bottom: 44px;
 }
 
 .form__item:not(:last-child) {
@@ -659,11 +695,7 @@ legend {
 }
 
 .form__single-wrapper {
-  padding: 52px 22px;
-}
-
-.form__submit-wrapper {
-  padding: 0 20px;
+  padding-top: 52px;
 }
 
 .form__required {
@@ -675,7 +707,8 @@ legend {
 }
 
 .gallery__slogan {
-  padding: 54px 20px 60px;
+  padding-top: 54px;
+  padding-bottom: 60px;
   line-height: 30px;
   background-color: #ffffff;
 }
@@ -691,6 +724,12 @@ legend {
   background-color: #283645;
 }
 
+.main__wrapper {
+  background-image: url("../img/nav-backgroud-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .main__title {
   padding-top: 36px;
   font-size: 24px;
@@ -701,7 +740,8 @@ legend {
 }
 
 .modal {
-  padding: 44px 20px 52px;
+  padding-top: 44px;
+  padding-bottom: 52px;
 }
 
 .modal__title {
@@ -720,7 +760,7 @@ legend {
 }
 
 .nav__item {
-  padding: 26px 88px;
+  padding: 26px 0;
 }
 
 .nav__link {
@@ -728,15 +768,6 @@ legend {
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
-}
-
-.page__body {
-  font-family: Open Sans, sans-serif;
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #283645;
 }
 
 .post {
@@ -773,12 +804,13 @@ legend {
   line-height: 24px;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 14px 20px;
+  padding-top: 14px;
   background-color: #d22856;
 }
 
 .preview {
-  padding: 30px 20px 38px;
+  padding-top: 30px;
+  padding-bottom: 38px;
   background-color: #1d2631;
 }
 
@@ -787,7 +819,6 @@ legend {
   font-weight: 300;
   line-height: 120%;
   color: #ffffff;
-  padding: 0 20px;
 }
 
 .preview__download {
@@ -795,17 +826,15 @@ legend {
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
-  padding: 28px 20px 0;
+  padding-top: 28px;
   margin-bottom: 32px;
 }
 
 .preview__list {
   margin-bottom: 28px;
-  padding: 0 58px;
 }
 
 .preview__item {
-  padding: 0 35px;
   margin-bottom: 28px;
 }
 
@@ -814,7 +843,6 @@ legend {
   font-weight: 300;
   line-height: 24px;
   color: #ffffff;
-  padding: 0 20px;
 }
 
 .price {
@@ -857,12 +885,12 @@ legend {
 
 .review {
   padding-top: 50px;
+  margin: 0;
 }
 
 .review__comment {
   line-height: 30px;
   margin-bottom: 44px;
-  padding: 0 20px;
 }
 
 .review__name {
@@ -887,7 +915,7 @@ legend {
 
 .survey__slogan {
   line-height: 30px;
-  padding: 54px 20px 0;
+  padding-top: 54px;
   margin-bottom: 54px;
 }
 
@@ -897,21 +925,5 @@ legend {
 
 .upload__slogan {
   padding: 50px 20px;
-}
-
-.visually-hidden:not(:focus),
-input[type=checkbox].visually-hidden,
-input[type=radio].visually-hidden {
-  position: absolute;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  overflow: hidden;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  white-space: nowrap;
-  clip: rect(0 0 0 0);
 }
 /*# sourceMappingURL=style.css.map */
