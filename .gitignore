@@ -25,3 +25,4 @@ npm-debug.log*
 *.pyc
 _arc
 __MACOSX
+node_modules
