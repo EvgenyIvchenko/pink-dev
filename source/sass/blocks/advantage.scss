@@ -1,12 +1,5 @@
 .advantage {
-  
-  &:first-child {
-    padding-top: 54px;
-  }
-
-  &:last-child {
-    margin-bottom: 48px;
-  }
+  text-align: center;
 }
 
 .advantage__title {
@@ -17,6 +10,8 @@
   margin-bottom: 24px;
 }
 
-.advantage__image {}
+.advantage__image {
+  display: none;
+}
 
 .advantage__text {}

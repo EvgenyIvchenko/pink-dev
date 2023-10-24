@@ -1,11 +1,7 @@
 .review {
-  padding-top: 50px;
   margin: 0;
-}
-
-.review__comment {
-  line-height: 30px;
-  margin-bottom: 44px;
+  display: grid;
+  text-align: center;
 }
 
 .review__name {
@@ -17,5 +13,10 @@
 }
 
 .review__age {
+  display: none;
+}
+
+.review__comment {
+  font-size: 14px;
   line-height: 30px;
 }

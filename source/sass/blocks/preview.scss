@@ -1,18 +1,46 @@
 .preview {
-  padding-top: 30px;
   padding-bottom: 38px;
   background-color: $color-bg-download;
 }
 
 .preview__image-wrapper {
-  margin-bottom: 28px;
+  display: grid;
+  align-items: end;
+  justify-content: center;
+  position: absolute;
+  height: 462px;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  width: 100%;
+  background-image: url("../img/main-wrapper-mobile.jpg");
+  background-size: cover;
+
+  img {
+    width: 320px;
+    height: 286px;
+  }
+}
+
+.preview__content {
+  padding-top: 95px;
+  position: relative;
+  // z-index: 1;
+}
+
+.preview__container {
+  display: grid;
+  justify-items: center;
 }
 
 .preview__slogan {
   font-size: 24px;
   font-weight: 300;
-  line-height: 120%;
+  line-height: 28px;
   color: $color-alternate;
+  text-align: center;
+  margin-bottom: 339px;
+  max-width: 280px;
 }
 
 .preview__download {
@@ -21,21 +49,30 @@
   font-weight: 700;
   line-height: 18px;
   color: $color-alternate;
-  padding-top: 28px;
   margin-bottom: 32px;
+  border: 3px solid #fff;
+  text-align: center;
+  border-radius: 28px;
+  width: 100%;
+  padding: 16px 20px;
+  max-width: 280px;
 }
 
 .preview__list {
+  display: flex;
+  align-items: center;
+  gap: 35px;
   margin-bottom: 28px;
 }
 
-.preview__item {
-  margin-bottom: 28px;
-}
+.preview__item {}
 
 .preview__caption {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
   color: $color-alternate;
+  width: 100%;
+  max-width: 280px;
+  text-align: center;
 }

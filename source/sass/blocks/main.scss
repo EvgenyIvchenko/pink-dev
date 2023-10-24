@@ -1,4 +1,6 @@
-.main {}
+.main {
+  flex: 1 0 auto;
+}
 
 .main__wrapper {
   background-image: url("../img/main-wrapper-mobile.jpg");
@@ -11,7 +13,6 @@
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
-  // color: $color-alternate;
 }
 
 .main__survey {}
