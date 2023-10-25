@@ -12,6 +12,12 @@
   height: 24px;
 }
 
+.nav__toggle--closed {}
+
+.nav__toggle--opened {
+  display: none;
+}
+
 .nav__wrapper {
   padding-top: 63px;
   top: 0;
