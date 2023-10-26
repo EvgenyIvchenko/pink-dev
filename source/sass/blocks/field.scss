@@ -1,4 +1,7 @@
-.field {}
+.field {
+  position: relative;
+  display: flex;
+}
 
 .field--main {}
 
@@ -9,26 +12,104 @@
   line-height: 30px;
 }
 
+.field--radio input:checked ~ .field__radio::after {
+  opacity: 1;
+}
+
+.field__radio {
+  padding-left: 70px;
+  
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 37px;
+    height: 37px;
+    background-color: $color-alternate;
+    border-radius: 50%;
+    border: 2px solid $color-bg-info;
+    transform: translateY(-50%);
+  }
+  
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 11px;
+    width: 15px;
+    height: 15px;
+    background-color: $color-accent;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}
+
 .field--checkbox {
   font-size: 18px;
   line-height: 30px;
 }
 
-.field__item-wrapper {}
+.field__checkbox {
+  padding-left: 59px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-color: $color-alternate;
+    border-radius: 1px;
+    border: 2px solid $color-bg-info;
+    transform: translateY(-50%);
+  }
+  
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 7px;
+    width: 22px;
+    height: 16px;
+    transform: translateY(-50%);
+    background-image: url("../img/field-checked.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+  }
+}
+
+.field--checkbox input:checked ~ .field__checkbox::after {
+  opacity: 1;
+}
+
+.field__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 .field__label {
-  line-height: 30px;
+  line-height: 17px;
   color: $color-accent;
   text-transform: uppercase;
   margin-bottom: 16px;
+  padding-left: 22px;
 }
 
 .field__input {
-  padding-top: 22px;
+  padding: 22px 20px;
+  border-radius: 1px;
+  border: 2px solid $color-bg-info;
+  // width: 280px;
   
   &::placeholder {
     font-size: 18px;
     line-height: 30px;
+    color: $color-main;
   }
 }
 

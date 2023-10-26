@@ -2,9 +2,11 @@
 
 .form__list {
   padding-bottom: 44px;
+  display: grid;
 }
 
 .form__item {
+  display: grid;
   
   &:not(:last-child) {
     margin-bottom: 28px;
@@ -14,20 +16,41 @@
 .form__fieldset-wrapper {}
 
 .form__single-wrapper {
-  padding-top: 52px;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form__fieldset {}
 
-.form__submit-wrapper {}
+.form__submit-wrapper {
+  display: grid;
+  gap: 46px;
+}
 
-.form__submit {}
+.form__submit {
+  border: 2px solid $color-button-form;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
 
 .form__required {
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
-  & span {
+  &-mobile {
     color: $color-accent;
   }
+
+  &-pc {
+    display: none;
+  }
 }
+
+.form__required-mobile {
+  color: $color-accent;
+}
+
+

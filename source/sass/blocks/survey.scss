@@ -1,11 +1,22 @@
 .survey {
   background-color: $color-alternate;
+  padding-top: 291px;
 }
 
-.survey__slogan {
-  line-height: 30px;
-  padding-top: 54px;
+.survey__container {
+  background-color: $color-alternate;
+}
+
+.surver__slogan-wrapper {
   margin-bottom: 54px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.survey__slogan-mobile {}
+
+.survey__slogan {
+  display: none;
 }
 
 .survey__form {}

@@ -6,11 +6,17 @@
   line-height: 18px;
   color: $color-accent;
   text-transform: uppercase;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 218px;
 
-  &:last-child {
+  &--last {
     margin-bottom: 22px;
   }
+}
+
+.fildset__legend--mobile {
+  display: none;
 }
 
 .fieldset__list {}
@@ -18,19 +24,19 @@
 .fieldset__item {
 
   &:not(:last-child) {
-    margin-bottom: 66px;
+    margin-bottom: 28px;
   }
 }
 
-.fieldset__message-wrapper {}
+.fieldset__message-wrapper {
+  display: grid;
+}
 
 .fieldset__message {
-  padding: 0;
-
+  padding: 20px;
+  
   &::placeholder {
     font-size: 18px;
     line-height: 30px;
-    padding-top: 22px;
-    padding-bottom: 22px;
   }
 }

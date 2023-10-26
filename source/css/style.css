@@ -443,9 +443,10 @@ input[type=radio].visually-hidden {
 }
 
 .container {
-  width: 100%;
+  display: grid;
   padding: 0 20px;
   margin: 0 auto;
+  width: 100%;
   max-width: 980px;
 }
 
@@ -634,9 +635,46 @@ input[type=radio].visually-hidden {
   margin-bottom: 12px;
 }
 
+.field {
+  position: relative;
+  display: flex;
+}
+
 .field--radio {
   font-size: 18px;
   line-height: 30px;
+}
+
+.field--radio input:checked ~ .field__radio::after {
+  opacity: 1;
+}
+
+.field__radio {
+  padding-left: 70px;
+}
+.field__radio::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 37px;
+  height: 37px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+  transform: translateY(-50%);
+}
+.field__radio::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 11px;
+  width: 15px;
+  height: 15px;
+  background-color: #d22856;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  opacity: 0;
 }
 
 .field--checkbox {
@@ -644,19 +682,62 @@ input[type=radio].visually-hidden {
   line-height: 30px;
 }
 
+.field__checkbox {
+  padding-left: 59px;
+}
+.field__checkbox::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #ffffff;
+  border-radius: 1px;
+  border: 2px solid #e5e5e5;
+  transform: translateY(-50%);
+}
+.field__checkbox::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 7px;
+  width: 22px;
+  height: 16px;
+  transform: translateY(-50%);
+  background-image: url("../img/field-checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.field--checkbox input:checked ~ .field__checkbox::after {
+  opacity: 1;
+}
+
+.field__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .field__label {
-  line-height: 30px;
+  line-height: 17px;
   color: #d22856;
   text-transform: uppercase;
   margin-bottom: 16px;
+  padding-left: 22px;
 }
 
 .field__input {
-  padding-top: 22px;
+  padding: 22px 20px;
+  border-radius: 1px;
+  border: 2px solid #e5e5e5;
 }
 .field__input::placeholder {
   font-size: 18px;
   line-height: 30px;
+  color: #283645;
 }
 
 .fieldset-grey {
@@ -671,24 +752,32 @@ input[type=radio].visually-hidden {
   line-height: 18px;
   color: #d22856;
   text-transform: uppercase;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
+  text-align: center;
+  max-width: 218px;
 }
-.fieldset__legend:last-child {
+.fieldset__legend--last {
   margin-bottom: 22px;
 }
 
+.fildset__legend--mobile {
+  display: none;
+}
+
 .fieldset__item:not(:last-child) {
-  margin-bottom: 66px;
+  margin-bottom: 28px;
+}
+
+.fieldset__message-wrapper {
+  display: grid;
 }
 
 .fieldset__message {
-  padding: 0;
+  padding: 20px;
 }
 .fieldset__message::placeholder {
   font-size: 18px;
   line-height: 30px;
-  padding-top: 22px;
-  padding-bottom: 22px;
 }
 
 .footer {
@@ -754,21 +843,47 @@ input[type=radio].visually-hidden {
 
 .form__list {
   padding-bottom: 44px;
+  display: grid;
 }
 
+.form__item {
+  display: grid;
+}
 .form__item:not(:last-child) {
   margin-bottom: 28px;
 }
 
 .form__single-wrapper {
-  padding-top: 52px;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__submit-wrapper {
+  display: grid;
+  gap: 46px;
+}
+
+.form__submit {
+  border: 2px solid #2aab6d;
+  border-radius: 3px;
+  text-transform: uppercase;
 }
 
 .form__required {
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
-.form__required span {
+.form__required-mobile {
+  color: #d22856;
+}
+.form__required-pc {
+  display: none;
+}
+
+.form__required-mobile {
   color: #d22856;
 }
 
@@ -1063,7 +1178,6 @@ input[type=radio].visually-hidden {
 
 .reviews {
   padding-top: 50px;
-  padding-bottom: 56px;
 }
 
 .reviews__container {
@@ -1112,12 +1226,21 @@ input[type=radio].visually-hidden {
 
 .survey {
   background-color: #ffffff;
+  padding-top: 291px;
+}
+
+.survey__container {
+  background-color: #ffffff;
+}
+
+.surver__slogan-wrapper {
+  margin-bottom: 54px;
+  text-align: center;
+  line-height: 30px;
 }
 
 .survey__slogan {
-  line-height: 30px;
-  padding-top: 54px;
-  margin-bottom: 54px;
+  display: none;
 }
 
 .upload {
