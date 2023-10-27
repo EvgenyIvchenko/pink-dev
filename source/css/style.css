@@ -567,6 +567,9 @@ input[type=radio].visually-hidden {
   line-height: 30px;
   color: #ffffff;
   background-color: #2aab6d;
+  text-transform: uppercase;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
 }
 
 .contacts {
@@ -611,24 +614,56 @@ input[type=radio].visually-hidden {
   color: #d22856;
 }
 
-.editor {
-  padding: 20px 20px 40px;
-  background-color: #f2f2f2;
-}
-
 .editor__image {
   margin-bottom: 42px;
 }
 
 .editor__list {
-  margin-bottom: 72px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
 }
 
-.editor__item {
-  margin-bottom: 40px;
+.editor__toggle {
+  display: grid;
+  align-items: center;
+  border: none;
+  background: transparent;
 }
-.editor__item:not(:last-child) {
-  margin-right: 36px;
+.editor__toggle path {
+  fill: #283645;
+  opacity: 0.3;
+}
+.editor__toggle--active path {
+  fill: #d22856;
+  opacity: 1;
+}
+
+.editor__bar-mobile {
+  padding-bottom: 34px;
+  display: grid;
+}
+
+.editor__bar {
+  max-width: 240px;
+  width: 100%;
+  height: 2px;
+  background-color: #283645;
+  justify-self: center;
+  position: relative;
+}
+.editor__bar::before {
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: 85%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #d22856;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .editor__submit {
@@ -778,6 +813,7 @@ input[type=radio].visually-hidden {
 .fieldset__message::placeholder {
   font-size: 18px;
   line-height: 30px;
+  color: #283645;
 }
 
 .footer {
@@ -841,6 +877,10 @@ input[type=radio].visually-hidden {
   height: 34px;
 }
 
+.form {
+  margin-bottom: 18px;
+}
+
 .form__list {
   padding-bottom: 44px;
   display: grid;
@@ -865,12 +905,6 @@ input[type=radio].visually-hidden {
   gap: 46px;
 }
 
-.form__submit {
-  border: 2px solid #2aab6d;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-
 .form__required {
   line-height: 30px;
   text-transform: uppercase;
@@ -887,11 +921,28 @@ input[type=radio].visually-hidden {
   color: #d22856;
 }
 
+.gallery__top-container {
+  padding-top: 237px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
 .gallery__slogan {
   padding-top: 54px;
   padding-bottom: 60px;
   line-height: 30px;
   background-color: #ffffff;
+  max-width: 250px;
+}
+
+.gallery__big-post {
+  margin-bottom: 20px;
+}
+
+.gallery__list {
+  display: grid;
+  gap: 20px;
 }
 
 .header {
@@ -939,9 +990,21 @@ input[type=radio].visually-hidden {
   text-align: center;
 }
 
+.modal-failure {
+  position: fixed;
+  top: 0;
+  display: none;
+}
+
 .modal {
   padding-top: 44px;
   padding-bottom: 52px;
+  box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
+  background-color: #ffffff;
+}
+
+.modal__top-wrapper {
+  text-align: center;
 }
 
 .modal__title {
@@ -955,21 +1018,33 @@ input[type=radio].visually-hidden {
   margin-bottom: 50px;
 }
 
+.modal__bottom-wrapper {
+  display: grid;
+}
+
 .nav {
   display: grid;
 }
 
 .nav__toggle {
-  padding: 20px;
   position: relative;
   z-index: 1;
   padding: 0;
   border: 0;
-  width: 24px;
+  background: transparent;
+}
+
+.nav__toggle--closed {
+  display: grid;
+  width: 50px;
   height: 24px;
 }
 
 .nav__toggle--opened {
+  display: grid;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
   display: none;
 }
 
@@ -1005,9 +1080,13 @@ input[type=radio].visually-hidden {
   background-color: #ffffff;
 }
 
+.post__image-wrapper {
+  position: relative;
+}
+
 .post__wrapper {
   background-color: #f2f2f2;
-  padding: 24px 10px 16px;
+  padding: 26px 10px 16px 16px;
 }
 
 .post__user-name {
@@ -1021,7 +1100,25 @@ input[type=radio].visually-hidden {
 }
 
 .post__text {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  max-width: 253px;
+}
+
+.post__likes-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.post__likes-toggle {
+  display: grid;
+  background-image: url("../img/catalog-like.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13px;
+  height: 12px;
+  border: none;
+  margin-right: 8px;
+  padding: 10px;
 }
 
 .post__likes-count {
@@ -1030,12 +1127,16 @@ input[type=radio].visually-hidden {
 }
 
 .post__of-the-day {
+  display: table;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 12px 20px;
   font-size: 12px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 12px;
   text-transform: uppercase;
   color: #ffffff;
-  padding-top: 14px;
   background-color: #d22856;
 }
 
@@ -1248,6 +1349,23 @@ input[type=radio].visually-hidden {
 }
 
 .upload__slogan {
-  padding: 50px 20px;
+  padding: 50px 0;
+  text-align: center;
+  line-height: 30px;
+}
+
+.upload__editor-wrapper {
+  background-color: #f2f2f2;
+  padding: 20px 0 40px;
+  display: grid;
+}
+
+.upload__editor-container {
+  border-bottom: 1px solid rgba(40, 54, 69, 0.1);
+  margin-bottom: 38px;
+}
+
+.upload__editor {
+  display: grid;
 }
 /*# sourceMappingURL=style.css.map */

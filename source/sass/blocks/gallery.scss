@@ -1,18 +1,29 @@
 .gallery {}
 
-.gallery__top-container {}
+.gallery__top-container {
+  padding-top: 237px;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
 
 .gallery__slogan {
   padding-top: 54px;
   padding-bottom: 60px;
   line-height: 30px;
   background-color: $color-alternate;
+  max-width: 250px;
 }
 
-.gallery__big-post {}
+.gallery__big-post {
+  margin-bottom: 20px;
+}
 
 .gallery__post-container {}
 
-.gallery__list {}
+.gallery__list {
+  display: grid;
+  gap: 20px ;
+}
 
 .gallery__item {}

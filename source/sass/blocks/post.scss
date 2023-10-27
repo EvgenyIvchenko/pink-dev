@@ -6,13 +6,13 @@
 
 .post__image {}
 
-.post__image-container {}
-
-.post__big-wrapper {}
+.post__image-wrapper {
+  position: relative;
+}
 
 .post__wrapper {
   background-color: $color-bg-alternate;
-  padding: 24px 10px 16px;
+  padding: 26px 10px 16px 16px;
 }
 
 .post__user-name {
@@ -27,12 +27,26 @@
 }
 
 .post__text {
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  max-width: 253px;
 }
 
-.post__likes-wrapper {}
+.post__likes-wrapper {
+  display: flex;
+  align-items: center;
+}
 
-.post__likes-toggle {}
+.post__likes-toggle {
+  display: grid;
+  background-image: url("../img/catalog-like.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13px;
+  height: 12px;
+  border: none;
+  margin-right: 8px;
+  padding: 10px;
+}
 
 .post__likes-count {
   color: $color-accent;
@@ -40,11 +54,15 @@
 }
 
 .post__of-the-day {
+  display: table;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 12px 20px;
   font-size: 12px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 12px;
   text-transform: uppercase;
   color: $color-alternate;
-  padding-top: 14px;
   background-color: $color-accent;
 }

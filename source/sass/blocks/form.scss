@@ -1,4 +1,6 @@
-.form {}
+.form {
+  margin-bottom: 18px;
+}
 
 .form__list {
   padding-bottom: 44px;
@@ -29,11 +31,7 @@
   gap: 46px;
 }
 
-.form__submit {
-  border: 2px solid $color-button-form;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
+.form__submit {}
 
 .form__required {
   line-height: 30px;
