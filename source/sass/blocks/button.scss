@@ -1,30 +1,36 @@
 .button {
   padding: 20px;
-}
-
-.button--first {
   font-size: 18px;
   font-weight: 700;
-  line-height: 18px;
-  color: $color-alternate;
-  background-color: transparent;
+
+  &--first {
+    line-height: 18px;
+    color: $color-alternate;
+    background-color: transparent;
+  }
+
+  &--second {
+    line-height: 18px;
+    color: $color-accent;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 3px solid $color-accent;
+  }
+  
+  &--third {
+    line-height: 30px;
+    color: $color-alternate;
+    background-color: $color-button-form;
+    text-transform: uppercase;
+    border: 2px solid $color-alternate;
+    border-radius: 5px;
+  }
+  
+  &--disabled {
+    border: 3px solid $color-main;
+    color: $color-main;
+    opacity: 0.1;
+  }
 }
 
-.button--second {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  color: $color-accent;
-  background-color: $color-alternate;
-}
 
-.button--third {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 30px;
-  color: $color-alternate;
-  background-color: $color-button-form;
-  text-transform: uppercase;
-  border: 2px solid $color-alternate;
-  border-radius: 5px;
-}

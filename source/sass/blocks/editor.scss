@@ -57,7 +57,9 @@
   }
 }
 
-.editor__buttons {}
+.editor__buttons {
+  display: grid;
+}
 
 .editor__submit {
   margin-bottom: 12px;

@@ -543,33 +543,33 @@ input[type=radio].visually-hidden {
 
 .button {
   padding: 20px;
-}
-
-.button--first {
   font-size: 18px;
   font-weight: 700;
+}
+.button--first {
   line-height: 18px;
   color: #ffffff;
   background-color: transparent;
 }
-
 .button--second {
-  font-size: 18px;
-  font-weight: 700;
   line-height: 18px;
   color: #d22856;
-  background-color: #ffffff;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 3px solid #d22856;
 }
-
 .button--third {
-  font-size: 18px;
-  font-weight: 700;
   line-height: 30px;
   color: #ffffff;
   background-color: #2aab6d;
   text-transform: uppercase;
   border: 2px solid #ffffff;
   border-radius: 5px;
+}
+.button--disabled {
+  border: 3px solid #283645;
+  color: #283645;
+  opacity: 0.1;
 }
 
 .contacts {
@@ -664,6 +664,10 @@ input[type=radio].visually-hidden {
   border: 2px solid #d22856;
   background-color: #ffffff;
   border-radius: 50%;
+}
+
+.editor__buttons {
+  display: grid;
 }
 
 .editor__submit {
@@ -990,21 +994,30 @@ input[type=radio].visually-hidden {
   text-align: center;
 }
 
+.modal-success {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+
 .modal-failure {
   position: fixed;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: none;
 }
 
 .modal {
-  padding-top: 44px;
-  padding-bottom: 52px;
   box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
   background-color: #ffffff;
+  border-radius: 1px;
 }
 
 .modal__top-wrapper {
   text-align: center;
+  padding-top: 44px;
+  margin-bottom: 40px;
 }
 
 .modal__title {
@@ -1014,12 +1027,20 @@ input[type=radio].visually-hidden {
   margin-bottom: 36px;
 }
 
-.modal__text {
-  margin-bottom: 50px;
+.modal-success .modal__text {
+  text-align: center;
 }
 
 .modal__bottom-wrapper {
   display: grid;
+  padding-top: 10px;
+  padding-bottom: 52px;
+}
+
+.modal__success-wrapper {
+  padding-top: 52px;
+  border-radius: 0 0 1px 1px;
+  background-color: #f2f2f2;
 }
 
 .nav {
