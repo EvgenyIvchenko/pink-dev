@@ -1,10 +1,14 @@
 .header {
   padding: 20px 0;
-  background-color: rgb(0 0 0 / 30%);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   width: 100%;
   z-index: 10;
   min-width: 320px;
+
+  @media (min-width: $tablet-min-width) {
+    padding: 27px 0 43px;
+  }
 }
 
 .header__container {
@@ -14,9 +18,36 @@
 }
 
 .header__logo {
-  display: block;
+  display: none;
   position: relative;
   z-index: 1;
+  align-self: center;
 }
 
-.header__nav {}
+.header__logo-mobile {
+  @media (max-width: $mobile-max-width) {
+    display: flex;
+  }
+}
+
+.header__logo-tablet {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    display: flex;
+  }
+}
+
+.header__logo-desktop {
+  @media (min-width: $desktop-min-width) {
+    display: flex;
+  }
+}
+
+
+.header__nav {
+  @media (min-width: $tablet-min-width) {
+    padding-top: 16px;
+  }
+  @media (min-width: $desktop-min-width) {
+    
+  }
+}

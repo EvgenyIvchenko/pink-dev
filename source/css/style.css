@@ -957,6 +957,11 @@ input[type=radio].visually-hidden {
   z-index: 10;
   min-width: 320px;
 }
+@media (min-width: 660px) {
+  .header {
+    padding: 27px 0 43px;
+  }
+}
 
 .header__container {
   display: flex;
@@ -965,11 +970,35 @@ input[type=radio].visually-hidden {
 }
 
 .header__logo {
-  display: block;
+  display: none;
   position: relative;
   z-index: 1;
+  align-self: center;
 }
 
+@media (max-width: 659px) {
+  .header__logo-mobile {
+    display: flex;
+  }
+}
+
+@media (min-width: 660px) and (max-width: 1199px) {
+  .header__logo-tablet {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header__logo-desktop {
+    display: flex;
+  }
+}
+
+@media (min-width: 660px) {
+  .header__nav {
+    padding-top: 16px;
+  }
+}
 .main {
   flex: 1 0 auto;
 }
@@ -1057,12 +1086,16 @@ input[type=radio].visually-hidden {
   border: 0;
   background: transparent;
 }
+@media (min-width: 1200px) {
+  .nav__toggle {
+    display: none;
+  }
+}
 
 .nav__toggle--closed {
   display: grid;
   width: 50px;
   height: 24px;
-  display: none;
 }
 
 .nav__toggle--opened {
@@ -1070,25 +1103,52 @@ input[type=radio].visually-hidden {
   vertical-align: middle;
   width: 24px;
   height: 24px;
+  display: none;
 }
 
 .nav__wrapper {
   padding-top: 63px;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  position: absolute;
   background-color: #283645;
   display: none;
 }
-.nav__wrapper--opened {
+@media (min-width: 660px) {
+  .nav__wrapper {
+    padding-top: 110px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav__wrapper {
+    display: grid;
+    position: static;
+    padding-top: 0;
+    background-color: transparent;
+  }
+}
+
+.nav__list {
   display: grid;
+}
+@media (min-width: 1200px) {
+  .nav__list {
+    display: flex;
+    gap: 78px;
+  }
 }
 
 .nav__item {
   border-top: 1px solid #000;
   box-shadow: 0px 1px 0px 0px #000, 0px 1px 0px 0px rgba(255, 255, 255, 0.15) inset;
   display: grid;
+}
+@media (min-width: 1200px) {
+  .nav__item {
+    box-shadow: none;
+    border: none;
+  }
 }
 
 .nav__link {
@@ -1098,6 +1158,13 @@ input[type=radio].visually-hidden {
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
+}
+@media (min-width: 1200px) {
+  .nav__link {
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0;
+  }
 }
 
 .post {
