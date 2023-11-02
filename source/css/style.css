@@ -1062,6 +1062,7 @@ input[type=radio].visually-hidden {
   display: grid;
   width: 50px;
   height: 24px;
+  display: none;
 }
 
 .nav__toggle--opened {
@@ -1069,7 +1070,6 @@ input[type=radio].visually-hidden {
   vertical-align: middle;
   width: 24px;
   height: 24px;
-  display: none;
 }
 
 .nav__wrapper {
