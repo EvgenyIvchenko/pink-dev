@@ -94,7 +94,11 @@
 
       <section class="preview">
         <div class="preview__image-wrapper">
-          <img src="./img/preview-image.png" width="320" height="286" alt="Телефон в руке">
+          <picture>
+            <source media="(min-width: $desktop-min-width)" srcset="./img/preview-image-desktop.png">
+            <source media="(min-width: $tablet-min-width)" srcset="./img/preview-image-tablet.png">
+            <img class="preview__image" src="./img/preview-image-mobile.png" width="320" height="286" alt="Телефон в руке">
+          </picture>
         </div>
 
         <div class="preview__content">

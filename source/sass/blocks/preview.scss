@@ -16,9 +16,32 @@
   background-image: url("../img/main-wrapper-mobile.jpg");
   background-size: cover;
 
-  img {
-    width: 320px;
-    height: 286px;
+  @media (min-width: $tablet-min-width) {
+    background-image: url("../img/main-wrapper-tablet.jpg");
+    background-size: cover;
+    height: 729px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    background-image: url("../img/main-wrapper-desktop.jpg");
+    background-size: cover;
+    height: 853px;
+    padding-left: 144px;
+  }
+}
+
+.preview__image {
+  width: 320px;
+  height: 286px;
+
+  @media (min-width: $tablet-min-width) {
+    width: 660px;
+    height: 545px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 1050px;
+    height: 645px;
   }
 }
 
