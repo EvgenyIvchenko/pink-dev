@@ -1,7 +1,12 @@
 .preview {
+  display: grid;
   padding-bottom: 38px;
   background-color: $color-bg-download;
-}
+
+  @media (min-width: $tablet-min-width) {
+    background-color: transparent;
+  }
+ }
 
 .preview__image-wrapper {
   display: grid;
@@ -15,6 +20,7 @@
   width: 100%;
   background-image: url("../img/main-wrapper-mobile.jpg");
   background-size: cover;
+  overflow: hidden;
 
   @media (min-width: $tablet-min-width) {
     background-image: url("../img/main-wrapper-tablet.jpg");
@@ -31,16 +37,19 @@
 }
 
 .preview__image {
+  display: block;
   width: 320px;
   height: 286px;
-
+  
   @media (min-width: $tablet-min-width) {
+    display: grid;
     width: 660px;
     height: 545px;
   }
 
   @media (min-width: $desktop-min-width) {
     width: 1050px;
+    max-width: 1050px;
     height: 645px;
   }
 }
@@ -48,12 +57,32 @@
 .preview__content {
   padding-top: 95px;
   position: relative;
-  // z-index: 1;
+  width: 100%;
+  justify-content: center;
+
+  @media (min-width: $tablet-min-width) {
+    padding-top: 212px;
+    display: flex;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    padding-top: 224px;
+  }
 }
 
 .preview__container {
   display: grid;
   justify-items: center;
+  width: 100%;
+  
+  @media (min-width: $tablet-min-width) {
+    justify-content: start;
+    max-width: $tablet-min-width;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    max-width: $desktop-min-width;
+  }
 }
 
 .preview__slogan {
@@ -64,6 +93,20 @@
   text-align: center;
   margin-bottom: 339px;
   max-width: 280px;
+  
+  @media (min-width: $tablet-min-width) {
+    font-size: 40px;
+    line-height: 42px;
+    margin-bottom: 40px;    
+    max-width: 240px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    font-size: 50px;
+    line-height: 58px;
+    margin-bottom: 50px;
+    max-width: 240px;
+  }
 }
 
 .preview__download {
@@ -76,9 +119,19 @@
   border: 3px solid #fff;
   text-align: center;
   border-radius: 28px;
-  width: 100%;
   padding: 16px 20px;
+  width: 100%;
   max-width: 280px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 46px;
+    max-width: 300px;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    font-size: 21px;
+    margin-bottom: 67px;
+  }
 }
 
 .preview__list {
@@ -86,6 +139,14 @@
   align-items: center;
   gap: 35px;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .preview__item {}
@@ -93,9 +154,15 @@
 .preview__caption {
   font-size: 14px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 17px;
   color: $color-alternate;
   width: 100%;
   max-width: 280px;
   text-align: center;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 18px;
+    max-width: 300px;
+  }
 }

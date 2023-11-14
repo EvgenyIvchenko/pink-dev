@@ -1,10 +1,50 @@
 .advantages-info {
-  background-color: $color-bg-alternate;
   display: none;
+  order: 3;
+  position: relative;
+
+  @media (min-width: $tablet-min-width) {
+    display: block;
+    grid-column: 1 / -1;
+    background-color: $color-alternate;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    display: block;
+    background-color: $color-bg-alternate;
+  }
 }
 
 .advantages-info__wrapper {
-  padding: 116px 166px 120px 500px;
+  @media (min-width: $tablet-min-width) {
+    padding-left: 310px;
+    padding-top: 102px;
+    // max-width: 310px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-left: 370px;
+  }
+}
+
+.advantages-info__wrapper::before {  
+  @media (min-width: $tablet-min-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 238px;
+    height: 276px;
+    background-image: url("./img/advantages-info-time-tablet.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    width: 298px;
+    height: 345px;    
+    background-image: url("./img/advantages-info-time-desktop.png");
+  }
 }
 
 .advantages-info__title {
