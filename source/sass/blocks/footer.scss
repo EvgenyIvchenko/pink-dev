@@ -1,16 +1,37 @@
 .footer {
   padding: 40px 0;
+
+  @media (min-width: $tablet-min-width) {
+    padding: 36px 0 40px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 70px 0 75px;
+  }
 }
 
 .footer__container {
   display: grid;
   justify-items: center;
+
+  @media (min-width: $tablet-min-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-min-width) {
+
+  }
 }
 
 .footer__logo {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 0;
+    justify-self: start;
+  }
 }
 
 .footer__logo-image {
@@ -29,7 +50,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__item {}
@@ -54,6 +79,10 @@
   align-items: center;
   line-height: 18px;
   font-size: 14px;
+
+  @media (min-width: $tablet-min-width) {
+    justify-self: end;
+  }
 }
 
 .footer__academy-link {

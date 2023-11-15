@@ -4,38 +4,44 @@
 
   @media (min-width: $tablet-min-width) {
     display: grid;
-    justify-content: center;
     background-color: $color-alternate;
-    padding: 102px 20px 29px 43%;
-    // width: 57%;
   }
-  
+
   @media (min-width: $desktop-min-width) {
     display: grid;
     background-color: $color-bg-alternate;
-    padding: 115px 130px 120px 130px;
-    max-width: 980px;
+  }
+}
+
+.advantages__info-container {
+  @media (min-width: $tablet-min-width) {
+    max-width: $tablet-min-width;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    max-width: $desktop-min-width;
   }
 }
 
 .advantages-info__wrapper {
   @media (min-width: $tablet-min-width) {
-    max-width: 310px;
+    display: grid;
     position: relative;
+    padding: 102px 0 28px 310px;
   }
-  
+
   @media (min-width: $desktop-min-width) {
-    max-width: 534px;
+    padding: 120px 0 120px 370px;
   }
 }
 
-.advantages-info__wrapper::before {  
+.advantages-info__wrapper::before {
   @media (min-width: $tablet-min-width) {
     display: block;
     position: absolute;
     content: "";
-    left: -310px;
-    bottom: -29px;
+    left: 0px;
+    bottom: 28px;
     width: 238px;
     height: 276px;
     background-image: url("../img/advantages-info-time-tablet.png");
@@ -43,12 +49,12 @@
     background-position: center;
     background-color: transparent;
    }
-  
+
   @media (min-width: $desktop-min-width) {
     width: 298px;
     height: 345px;
-    left: -370px;
-    bottom: -53px;
+    left: 0px;
+    bottom: 67px;
     background-image: url("../img/advantages-info-time-desktop.png");
   }
 }
@@ -58,24 +64,25 @@
     font-size: 30px;
     font-weight: 700;
     line-height: 30px;
+    max-width: 200px;
     color: $color-heading;
     margin-bottom: 24px;
-    max-width: 168px;
   }
 
   @media (min-width: $desktop-min-width) {
-    max-width: 298px;
+    max-width: 100%;
   }
 }
 
 .advantages-info__text {
   @media (min-width: $tablet-min-width) {
     margin-bottom: 24px;
-    max-width: 300px;
   }
-  
+
   @media (min-width: $desktop-min-width) {
-    max-width: 405px;
+    max-width: 534px;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 

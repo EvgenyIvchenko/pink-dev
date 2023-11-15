@@ -44,7 +44,7 @@
             <path d="M10.785 33.6407C10.056 33.6355 9.35856 33.3471 8.84491 32.8384C8.33126 32.3298 8.04302 31.6421 8.04303 30.9253C8.04304 31.6438 7.75342 32.333 7.2376 32.8419C6.72178 33.3508 6.02182 33.6381 5.29102 33.6407C6.02182 33.6433 6.72178 33.9305 7.2376 34.4395C7.75342 34.9484 8.04304 35.6376 8.04303 36.356C8.04302 35.6393 8.33126 34.9516 8.84491 34.4429C9.35856 33.9343 10.056 33.6459 10.785 33.6407Z" fill="#D22856"/>
           </svg>
         </a>
-        
+
         <nav class="header__nav nav">
           <button class="nav__toggle">
             <span class="visually-hidden">Открыть меню</span>
@@ -175,11 +175,13 @@
           </div>
 
           <div class="advantages__info advantages-info">
-            <div class="advantages-info__wrapper">
-              <h3 class="advantages-info__title">Эффект на 24 часа!</h3>
-              <p class="advantages-info__text">Британские ученые провели исследования и доказали,
-                что положительный эффект от использования приложения длится целые сутки!</p>
-              <a class="advantages-info__link" href="#">Узнать больше об исследовании</a>
+            <div class="advantages__info-container container">
+              <div class="advantages-info__wrapper">
+                <h3 class="advantages-info__title">Эффект на&nbsp;24 часа!</h3>
+                <p class="advantages-info__text">Британские ученые провели исследования и доказали,
+                  что&nbsp;положительный эффект от использования приложения длится целые сутки!</p>
+                <a class="advantages-info__link" href="#">Узнать больше об исследовании</a>
+              </div>
             </div>
           </div>
         </div>
@@ -191,12 +193,9 @@
 
           <div class="reviews__slider">
             <div class="reviews__wrapper">
-              <button class="reviews__button slider-button" type="button">
-                <span class="visually-hidden">Предыдущий слайд</span>
-              </button>
-
+              
               <ul class="reviews__list">
-                <li class="reviews__item">
+                <li class="reviews__item reviews__item--current">
                   <blockquote class="review">
                     <p class="review__name">Николай Петров</p>
                     <p class="review__age">25 лет, водитель трамвая</p>
@@ -227,10 +226,15 @@
                   </blockquote>
                 </li>
               </ul>
-
-              <button class="reviews__button slider-button" type="button">
-                <span class="visually-hidden">Следующий слайд</span>
-              </button>
+              
+              <div class="reviews__buttons">
+                <button class="reviews__button slider-button" type="button">
+                  <span class="visually-hidden">Предыдущий слайд</span>
+                </button>
+                <button class="reviews__button slider-button" type="button">
+                  <span class="visually-hidden">Следующий слайд</span>
+                </button>
+              </div>
             </div>
 
             <div class="reviews__dots slider-dots">
@@ -334,7 +338,13 @@
         </div>
 
         <div class="contacts__map">
-          <img src="../img/contacts-map.jpg" width="320" height="200" alt="Мы на карте">
+          <div class="contacts__map-wrapper">
+            <picture>
+              <source media="(min-width: 980px)" srcset="../img/contacts-map-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="../img/contacts-map-tablet.jpg">
+              <img src="../img/contacts-map-mobile.jpg" width="320" height="200" alt="Мы на карте">
+            </picture>
+          </div>
         </div>
       </section>
     </main>

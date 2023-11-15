@@ -3,6 +3,10 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
+
+    @media (min-width: $desktop-min-width) {
+      display: none;
+    }
 }
 
 .slider-dots__item {
@@ -12,6 +16,7 @@
     border: 3px solid #fff;
     background-color: $color-main;
     opacity: 0.3;
+    cursor: pointer;
 
     &--current {
         opacity: 1;
