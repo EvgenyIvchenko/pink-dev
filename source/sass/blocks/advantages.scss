@@ -44,15 +44,15 @@
 }
 
 .advantages__content-block {
+  display: grid;
   padding-top: 62px;
   background-color: $color-bg-alternate;
 
   @media (min-width: $tablet-min-width) {
     padding-top: 0;
-  }
-
-  @media (min-width: $desktop-min-width) {
-
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -68,6 +68,7 @@
   }
   
   @media (min-width: $desktop-min-width) {
+    justify-content: center;
     max-width: 980px;
   }
 }
@@ -88,7 +89,6 @@
   
   @media (min-width: $desktop-min-width) {
     grid-row-gap: 0;
-    grid-column-gap: 20px;
     padding-top: 0;
     margin-bottom: 76px;
     max-width: inherit;
