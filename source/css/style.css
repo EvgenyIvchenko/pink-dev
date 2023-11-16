@@ -620,7 +620,7 @@ input[type=radio].visually-hidden {
   .advantages__list {
     grid-row-gap: 0;
     padding-top: 0;
-    margin-bottom: 76px;
+    margin-bottom: 54px;
     max-width: inherit;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -700,8 +700,8 @@ input[type=radio].visually-hidden {
     display: block;
     position: absolute;
     content: "";
-    left: 0px;
-    bottom: 28px;
+    left: 0;
+    bottom: 0;
     width: 238px;
     height: 276px;
     background-image: url("../img/advantages-info-time-tablet.png");
@@ -738,14 +738,17 @@ input[type=radio].visually-hidden {
 
 @media (min-width: 660px) {
   .advantages-info__text {
+    line-height: 21px;
     margin-bottom: 24px;
+    max-width: 310px;
   }
 }
 @media (min-width: 980px) {
   .advantages-info__text {
     max-width: 534px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 25px;
+    margin-bottom: 47px;
   }
 }
 
