@@ -1,3 +1,7 @@
 .fieldset-grey {
   background-color: $color-bg-alternate;
+
+  @media (min-width: $tablet-min-width) {
+    background-color: transparent;
+  }
 }

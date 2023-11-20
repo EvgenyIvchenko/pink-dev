@@ -1,15 +1,22 @@
 .field {
   position: relative;
   display: flex;
-}
-
-.field--main {}
-
-.field--alternate {}
-
-.field--radio {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 18px;
+  
+  &--main {}
+
+  &--alternate {}
+
+  &--radio {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  &--checkbox {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .field--radio input:checked ~ .field__radio::after {
@@ -44,11 +51,6 @@
     transform: translateY(-50%);
     opacity: 0;
   }
-}
-
-.field--checkbox {
-  font-size: 18px;
-  line-height: 30px;
 }
 
 .field__checkbox {
@@ -90,26 +92,112 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  @media (min-width: $tablet-min-width) {
+    flex-direction: column-reverse;
+  }
+}
+
+.field__wrapper-phone {
+  &::before {
+    @media (min-width: $tablet-min-width) {
+      position: absolute;
+      content: "";
+      top: 2px;
+      right: 1px;
+      width: 70px;
+      height: 68px;
+      border-radius: 1px;
+      background-color: $color-bg-info;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-min-width) {
+      position: absolute;
+      content: "";
+      top: 26px;
+      right: 26px;
+      width: 20px;
+      height: 19px;
+      background-color: transparent;
+      background-image: url("../img/input-icon-phone.png");
+    }
+  }
+}
+
+.field__wrapper-mail {
+  &::before {
+    @media (min-width: $tablet-min-width) {
+      position: absolute;
+      content: "";
+      top: 2px;
+      right: 2px;
+      width: 70px;
+      height: 68px;
+      border-radius: 1px;
+      background-color: $color-bg-info;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-min-width) {
+      position: absolute;
+      content: "";
+      top: 29px;
+      right: 26px;
+      width: 18px;
+      height: 13px;
+      background-color: transparent;
+      background-image: url("../img/input-icon-mail.png");
+    }
+  }
 }
 
 .field__label {
-  line-height: 17px;
+  font-size: 14px;
+  line-height: 14px;
   color: $color-accent;
   text-transform: uppercase;
-  margin-bottom: 16px;
   padding-left: 22px;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-min-width) {
+    padding-left: 17px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-left: 0;
+  }
+
+  &--phone {
+    padding-top: 22px;
+  }
 }
 
 .field__input {
   padding: 22px 20px;
   border-radius: 1px;
   border: 2px solid $color-bg-info;
-  // width: 280px;
+  font-size: 18px;
+  line-height: 18px;
   
+  &--phone {
+    padding-right: 92px;
+  }
+
+  &--mail {
+    padding-right: 92px;
+  }
+
   &::placeholder {
-    font-size: 18px;
-    line-height: 30px;
     color: $color-main;
+  }
+
+  @media (min-width: $tablet-min-width) {
+    width: 100%;
   }
 }
 

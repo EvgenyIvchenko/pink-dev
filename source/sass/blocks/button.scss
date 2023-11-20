@@ -2,9 +2,9 @@
   padding: 20px;
   font-size: 18px;
   font-weight: 700;
+  line-height: 18px;
 
   &--first {
-    line-height: 18px;
     color: $color-alternate;
     background-color: transparent;
   }
@@ -18,13 +18,14 @@
   }
   
   &--third {
-    line-height: 30px;
     color: $color-alternate;
     background-color: $color-button-form;
     text-transform: uppercase;
     border: 2px solid $color-alternate;
     border-radius: 5px;
-  }
+    width: 100%;
+    max-width: 296px;
+    }
   
   &--disabled {
     border: 3px solid $color-main;

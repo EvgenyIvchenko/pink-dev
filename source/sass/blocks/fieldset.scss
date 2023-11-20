@@ -1,5 +1,15 @@
 .fieldset {
   border: none;
+
+  @media (min-width: $tablet-min-width) {
+    border: 2px solid $color-bg-info;
+    border-radius: 1px;
+    padding: 55px 60px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding: 62px 58px 23px;
+  }
 }
 
 .fieldset__legend {
@@ -9,24 +19,36 @@
   margin-bottom: 40px;
   text-align: center;
   max-width: 218px;
+  
+  @media (min-width: $tablet-min-width) {
+    max-width: none;
+    padding: 0 30px;
+    margin-bottom: 0;
+  }
 
   &--last {
     margin-bottom: 22px;
+
+    @media (min-width: $tablet-min-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .fildset__legend--mobile {
   display: none;
-}
 
-.fieldset__list {}
-
-.fieldset__item {
-
-  &:not(:last-child) {
-    margin-bottom: 28px;
+  @media (min-width: $tablet-min-width) {
+    display: block;
   }
 }
+
+.fieldset__list {
+  display: grid;
+  gap: 38px;
+}
+
+.fieldset__item {}
 
 .fieldset__message-wrapper {
   display: grid;

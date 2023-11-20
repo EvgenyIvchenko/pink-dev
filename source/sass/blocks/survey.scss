@@ -1,22 +1,67 @@
 .survey {
   background-color: $color-alternate;
-  padding-top: 291px;
-}
+  padding-top: 289px;
 
-.survey__container {
-  background-color: $color-alternate;
+  @media (min-width: $tablet-min-width) {
+    padding-top: 539px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-top: 504px;
+    display: grid;
+    justify-content: center;
+  }
 }
 
 .survey__slogan-wrapper {
-  margin-bottom: 54px;
+  justify-content: center;
   text-align: center;
   line-height: 30px;
+  margin-bottom: 55px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 84px;
+  }
 }
 
-.survey__slogan-mobile {}
-
 .survey__slogan {
-  display: none;
+  line-height: 23px;
+  max-width: 280px;
+  
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 490px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    line-height: 22px;
+    max-width: 756px;
+  }
+
+  &--tablet {
+    display: none;
+
+    @media (min-width: $tablet-min-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: $desktop-min-width) {
+      display: inline;
+    }
+  }
 }
 
 .survey__form {}
