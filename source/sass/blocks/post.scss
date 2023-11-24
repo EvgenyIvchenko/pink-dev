@@ -4,30 +4,67 @@
 
 .post--big {}
 
-.post__image {}
+.post__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+  @media (min-width: $tablet-min-width) {
+    width: 300px;
+    height: 300px;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    width: 300px;
+    height: 400px;
+  }
+}
 
 .post__image-wrapper {
   position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 43%;
+
+  @media (min-width: $tablet-min-width) {
+    padding-bottom: 77%;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-bottom: 42.2%;
+  }
+
+  & img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .post__wrapper {
   background-color: $color-bg-alternate;
-  padding: 26px 10px 16px 16px;
+  padding: 25px 10px 25px 17px;
 }
 
 .post__user-name {
+  line-height: 14px;
   font-weight: 700;
   margin-bottom: 14px;
 
-    & span {
-      font-style: 12px;
-      font-weight: 300;
-      text-transform: uppercase;
-    }
+  & span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
 }
 
 .post__text {
-  margin-bottom: 14px;
+  line-height: 21px;
+  margin-bottom: 23px;
   max-width: 253px;
 }
 
@@ -38,20 +75,22 @@
 
 .post__likes-toggle {
   display: grid;
-  background-image: url("../img/catalog-like.png");
+  background-image: url("../img/catalog-like.svg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 13px;
-  height: 12px;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
   border: none;
-  margin-right: 8px;
-  padding: 10px;
+  margin-right: 18px;
 }
 
 .post__likes-count {
+  font-size: 12px;
+  line-height: 16px;
   color: $color-accent;
   text-transform: uppercase;
-}
+  }
 
 .post__of-the-day {
   display: table;

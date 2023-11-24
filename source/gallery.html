@@ -90,8 +90,8 @@
     </header>
 
     <main class="main">
-      <div class="main__wrapper">
-        <h1 class="main__title">Фотографии пользователей</h1>
+      <div class="main__title-wrapper">
+        <h1 class="main__title main__title--gallery">Фотографии пользователей</h1>
       </div>
 
       <section class="gallery">
@@ -106,7 +106,11 @@
 
         <div class="gallery__big-post post post--big">
           <div class="post__image-wrapper">
-            <img class="post__image" src="./img/catalog-panorama-mobile.jpg" width="320" height="137" alt="Панорама моста">
+            <picture>
+              <source media="(min-width: 980px)" srcset="../img/catalog-panorama-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="../img/catalog-panorama-tablet.jpg">
+              <img class="post__image" src="../img/catalog-panorama-mobile.jpg" width="320" height="137" alt="Панорама моста">
+            </picture>
             <p class="post__of-the-day">Панорама дня</p>
           </div>
 
@@ -128,7 +132,13 @@
         <div class="gallery__post-container container">
           <ul class="gallery__list">
             <li class="gallery__item post">
-              <img class="post__image" src="./img/catalog-white-car-mobile.jpg" width="280" height="180" alt="Белый автомобиль">
+              <div class="gallery__img-wrapper">
+                <picture>
+                  <source media="(min-width: 980px)" srcset="../img/catalog-white-car-desktop.jpg">
+                  <source media="(min-width: 660px)" srcset="../img/catalog-white-car-tablet.jpg">
+                  <img class="post__image" src="../img/catalog-white-car-mobile.jpg" width="280" height="180" alt="Белый автомобиль">
+                </picture>
+              </div>
               <div class="post__wrapper">
                 <p class="post__user-name">Левон <span>(5 часов назад)</span></p>
                 <p class="post__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
@@ -139,7 +149,13 @@
               </div>
             </li>
             <li class="gallery__item post">
-              <img class="post__image" src="./img/catalog-drums-mobile.jpg" width="280" height="180" alt="Ударная установка">
+              <div class="gallery__img-wrapper">
+                <picture>
+                  <source media="(min-width: 980px)" srcset="../img/catalog-drums-desktop.jpg">
+                  <source media="(min-width: 660px)" srcset="../img/catalog-drums-tablet.jpg">
+                  <img class="post__image" src="../img/catalog-drums-mobile.jpg" width="280" height="180" alt="Ударная установка">
+                </picture>
+              </div>
               <div class="post__wrapper">
                 <p class="post__user-name">Антон <span>(12 часов назад)</span></p>
                 <p class="post__text">Соседи будут рады!</p>
@@ -150,7 +166,13 @@
               </div>
             </li>
             <li class="gallery__item post">
-              <img class="post__image" src="./img/catalog-sky-mobile.jpg" width="280" height="180" alt="Небо">
+              <div class="gallery__img-wrapper">
+                <picture>
+                  <source media="(min-width: 980px)" srcset="../img/catalog-sky-desktop.jpg">
+                  <source media="(min-width: 660px)" srcset="../img/catalog-sky-tablet.jpg">
+                  <img class="post__image" src="../img/catalog-sky-mobile.jpg" width="280" height="180" alt="Небо">
+                </picture>
+              </div>
               <div class="post__wrapper">
                 <p class="post__user-name">Борис <span>(20 часов назад)</span></p>
                 <p class="post__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
@@ -161,7 +183,13 @@
               </div>
             </li>
             <li class="gallery__item post">
-              <img class="post__image" src="./img/catalog-watermelons-mobile.jpg" width="280" height="180" alt="Кубанская бахча">
+              <div class="gallery__img-wrapper">
+                <picture>
+                  <source media="(min-width: 980px)" srcset="../img/catalog-watermelons-desktop.jpg">
+                  <source media="(min-width: 660px)" srcset="../img/catalog-watermelons-tablet.jpg">
+                  <img class="post__image" src="../img/catalog-watermelons-mobile.jpg" width="280" height="180" alt="Кубанская бахча">
+                </picture>
+              </div>
               <div class="post__wrapper">
                 <p class="post__user-name">Сергей <span>(25 часов назад)</span></p>
                 <p class="post__text">Самая кубанская в мире!</p>
@@ -172,7 +200,13 @@
               </div>
             </li>
             <li class="gallery__item post">
-              <img class="post__image" src="./img/catalog-legs-mobile.jpg" width="280" height="180" alt="Склон горы">
+              <div class="gallery__img-wrapper">
+                <picture>
+                  <source media="(min-width: 980px)" srcset="../img/catalog-legs-desktop.jpg">
+                  <source media="(min-width: 660px)" srcset="../img/catalog-legs-tablet.jpg">
+                  <img class="post__image" src="../img/catalog-legs-mobile.jpg" width="280" height="180" alt="Склон горы">
+                </picture>
+              </div>
               <div class="post__wrapper">
                 <p class="post__user-name">Максим <span>(40 часов назад)</span></p>
                 <p class="post__text">Где снег-то?</p>
@@ -183,7 +217,13 @@
               </div>
             </li>
             <li class="gallery__item post">
-              <img class="post__image" src="./img/catalog-airplane-wing-mobile.jpg" width="280" height="180" alt="Крыло самолёта">
+              <div class="gallery__img-wrapper">
+                <picture>
+                  <source media="(min-width: 980px)" srcset="../img/catalog-airplane-wing-desktop.jpg">
+                  <source media="(min-width: 660px)" srcset="../img/catalog-airplane-wing-tablet.jpg">
+                  <img class="post__image" src="../img/catalog-airplane-wing-mobile.jpg" width="280" height="180" alt="Крыло самолёта">
+                </picture>
+              </div>
               <div class="post__wrapper">
                 <p class="post__user-name">Надежда <span>(45 часов назад)</span></p>
                 <p class="post__text">Где снег-то?</p>
@@ -210,7 +250,10 @@
         <div class="upload__editor-wrapper">
           <form class="upload__editor">
             <div class="upload__editor-container editor container">
-              <img class="editor__image" src="./img/catalog-road-mobile.jpg" width="280" height="374" alt="Снежная дорога">
+              <picture>
+                <source media="(min-width: 660px)" srcset="../img/catalog-road.jpg">
+                <img class="editor__image" src="../img/catalog-road-mobile.jpg" width="280" height="374" alt="Снежная дорога">
+              </picture>
     
               <ul class="editor__list">
                 <li class="editor__item">

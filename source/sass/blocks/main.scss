@@ -15,6 +15,7 @@
   left: 0;
   width: 100%;
   min-width: 320px;
+  min-height: 235px;
   display: flex;
   justify-content: center;
   
@@ -22,12 +23,14 @@
     background-image: url("../img/main-wrapper-tablet.jpg");
     padding-top: 191px;
     padding-bottom: 74px;
+    min-height: 440px;
   }
   
   @media (min-width: $desktop-min-width) {
     background-image: url("../img/main-wrapper-desktop.jpg");
     padding-top: 184px;
     padding-bottom: 104px;
+    min-height: 394px;
   }
 }
 
@@ -41,12 +44,19 @@
 
   @media (min-width: $tablet-min-width) {
     font-size: 50px;
-    line-height: 58px;
+    line-height: 53px;
     max-width: 620px;
   }
 
   @media (min-width: $desktop-min-width) {
     max-width: 747px;
+  }
+  
+  &--gallery {
+    @media (min-width: $desktop-min-width) {
+            max-width: 658px;
+    }
+  
   }
 }
 

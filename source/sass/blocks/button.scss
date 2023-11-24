@@ -20,8 +20,8 @@
   &--third {
     color: $color-alternate;
     background-color: $color-button-form;
+    border: 2px solid $color-button-form;
     text-transform: uppercase;
-    border: 2px solid $color-alternate;
     border-radius: 5px;
     width: 100%;
     max-width: 296px;
