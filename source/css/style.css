@@ -1549,10 +1549,25 @@ input[type=radio].visually-hidden {
 .gallery__big-post {
   margin-bottom: 20px;
 }
+@media (min-width: 660px) {
+  .gallery__big-post {
+    margin-bottom: 50px;
+  }
+}
 
 .gallery__list {
   display: grid;
   gap: 20px;
+}
+@media (min-width: 660px) {
+  .gallery__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 980px) {
+  .gallery__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .gallery__img-wrapper {
@@ -1560,6 +1575,16 @@ input[type=radio].visually-hidden {
   width: 100%;
   height: 0;
   padding-bottom: 64.5%;
+}
+@media (min-width: 660px) {
+  .gallery__img-wrapper {
+    padding-bottom: 64.5%;
+  }
+}
+@media (min-width: 980px) {
+  .gallery__img-wrapper {
+    padding-bottom: 64.5%;
+  }
 }
 
 .header {
@@ -1876,18 +1901,6 @@ input[type=radio].visually-hidden {
   height: 100%;
   object-fit: cover;
 }
-@media (min-width: 660px) {
-  .post__image {
-    width: 300px;
-    height: 300px;
-  }
-}
-@media (min-width: 980px) {
-  .post__image {
-    width: 300px;
-    height: 400px;
-  }
-}
 
 .post__image-wrapper {
   position: relative;
@@ -1914,8 +1927,21 @@ input[type=radio].visually-hidden {
 }
 
 .post__wrapper {
+  display: grid;
   background-color: #f2f2f2;
   padding: 25px 10px 25px 17px;
+}
+@media (min-width: 660px) {
+  .post__wrapper {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 660px) {
+  .post__container .post__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .post__user-name {
@@ -1934,10 +1960,45 @@ input[type=radio].visually-hidden {
   margin-bottom: 23px;
   max-width: 253px;
 }
+@media (min-width: 660px) {
+  .post__text {
+    min-height: 42px;
+  }
+}
+
+@media (min-width: 660px) {
+  .post__container .post__text {
+    max-width: none;
+    order: 1;
+    grid-column: 1/-1;
+    margin-bottom: 0;
+    min-height: 0;
+  }
+}
+@media (min-width: 980px) {
+  .post__container .post__text {
+    text-align: center;
+  }
+}
 
 .post__likes-wrapper {
   display: flex;
   align-items: center;
+}
+@media (min-width: 660px) {
+  .post__likes-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 660px) {
+  .post__container .post__likes-wrapper {
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+  }
 }
 
 .post__likes-toggle {
@@ -1951,6 +2012,11 @@ input[type=radio].visually-hidden {
   border: none;
   margin-right: 18px;
 }
+@media (min-width: 660px) {
+  .post__likes-toggle {
+    margin-right: 0;
+  }
+}
 
 .post__likes-count {
   font-size: 12px;
@@ -1960,7 +2026,6 @@ input[type=radio].visually-hidden {
 }
 
 .post__of-the-day {
-  display: table;
   position: absolute;
   top: 0;
   right: 20px;
@@ -1971,6 +2036,18 @@ input[type=radio].visually-hidden {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #d22856;
+}
+@media (min-width: 660px) {
+  .post__of-the-day {
+    top: 57px;
+  }
+}
+@media (min-width: 980px) {
+  .post__of-the-day {
+    top: 54px;
+    left: calc(50% + 330px);
+    max-width: 141px;
+  }
 }
 
 .preview {
@@ -2471,6 +2548,13 @@ input[type=radio].visually-hidden {
   padding: 50px 0;
   text-align: center;
   line-height: 24px;
+}
+@media (min-width: 660px) {
+  .upload__slogan {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 75px 0;
+  }
 }
 
 .upload__editor-wrapper {

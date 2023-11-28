@@ -10,16 +10,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
-  @media (min-width: $tablet-min-width) {
-    width: 300px;
-    height: 300px;
-  }
-  
-  @media (min-width: $desktop-min-width) {
-    width: 300px;
-    height: 400px;
-  }
+
 }
 
 .post__image-wrapper {
@@ -46,8 +37,20 @@
 }
 
 .post__wrapper {
+  display: grid;
   background-color: $color-bg-alternate;
   padding: 25px 10px 25px 17px;
+
+  @media (min-width: $tablet-min-width) {
+    padding: 30px;
+  }
+}
+
+.post__container .post__wrapper {
+  @media (min-width: $tablet-min-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .post__user-name {
@@ -66,11 +69,43 @@
   line-height: 21px;
   margin-bottom: 23px;
   max-width: 253px;
+
+  @media (min-width: $tablet-min-width) {
+    min-height: 42px;
+  }
+}
+
+.post__container .post__text {
+  @media (min-width: $tablet-min-width) {
+    max-width: none;
+    order: 1;
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+    min-height: 0;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    text-align: center;
+  }
 }
 
 .post__likes-wrapper {
   display: flex;
   align-items: center;
+
+  @media (min-width: $tablet-min-width) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.post__container .post__likes-wrapper {
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+  }
 }
 
 .post__likes-toggle {
@@ -83,6 +118,10 @@
   height: 16px;
   border: none;
   margin-right: 18px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-right: 0;
+  }
 }
 
 .post__likes-count {
@@ -93,7 +132,6 @@
   }
 
 .post__of-the-day {
-  display: table;
   position: absolute;
   top: 0;
   right: 20px;
@@ -104,4 +142,16 @@
   text-transform: uppercase;
   color: $color-alternate;
   background-color: $color-accent;
+
+  @media (min-width: $tablet-min-width) {
+    top: 57px;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    top: 54px;
+    left: calc(50% + 330px);
+    max-width: 141px;
+  }
 }
+
+.post__container {}

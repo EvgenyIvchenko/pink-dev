@@ -8,6 +8,12 @@
   padding: 50px 0;
   text-align: center;
   line-height: 24px;
+
+  @media (min-width: $tablet-min-width) {
+    font-size: 18px;
+    line-height: 30px;
+    padding: 75px 0;
+  }
 }
 
 .upload__editor-wrapper {
