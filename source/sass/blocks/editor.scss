@@ -1,8 +1,17 @@
 .editor {}
 
-.editor__image {
-  margin-bottom: 42px;
+.editor__picture {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 43px;
+
+  @media (min-width: $tablet-min-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
+
+.editor__image {}
 
 .editor__list {
   margin-bottom: 40px;
@@ -34,6 +43,10 @@
 .editor__bar-mobile {
   padding-bottom: 34px;
   display: grid;
+
+  @media (min-width: $tablet-min-width) {
+    display: none;
+  }
 }
 
 .editor__bar {
@@ -59,6 +72,7 @@
 
 .editor__buttons {
   display: grid;
+  justify-content: center;
 }
 
 .editor__submit {

@@ -16,17 +16,39 @@
   }
 }
 
+
 .upload__editor-wrapper {
   background-color: $color-bg-alternate;
   padding: 20px 0 40px;
   display: grid;
+  
+  @media (min-width: $tablet-min-width) {
+    padding: 57px 0;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    padding: 57px 60px 57px 80px;
+  }
 }
 
-.upload__editor-container {
-  border-bottom: 1px solid rgba($color-main, $alpha: 0.1);
-  margin-bottom: 38px;
-}
+// .upload__editor-container {
+//   justify-content: center;
 
-.upload__editor {
-  display: grid;
+//   @media (min-width: $tablet-min-width) {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 1fr 1fr;
+//   }
+// }
+
+
+.upload__editor-picture {
+  margin-bottom: 42px;
+  max-width: 280px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 0;
+    max-width: 300px;
+    grid-row: 1/-1;
+  }
 }
