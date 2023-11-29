@@ -907,14 +907,14 @@ input[type=radio].visually-hidden {
 }
 
 .editor__picture {
-  display: grid;
-  justify-content: center;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
+  max-width: 280px;
 }
 @media (min-width: 660px) {
   .editor__picture {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    margin-bottom: 0;
+    max-width: 300px;
+    grid-row: 1/-1;
   }
 }
 
@@ -978,6 +978,16 @@ input[type=radio].visually-hidden {
 
 .editor__submit {
   margin-bottom: 12px;
+}
+@media (min-width: 660px) {
+  .editor__submit {
+    margin-bottom: 24px;
+  }
+}
+@media (min-width: 980px) {
+  .editor__submit {
+    margin-bottom: 0;
+  }
 }
 
 .field {
@@ -2590,6 +2600,23 @@ input[type=radio].visually-hidden {
 @media (min-width: 980px) {
   .upload__editor-wrapper {
     padding: 57px 60px 57px 80px;
+  }
+}
+
+.upload__editor {
+  justify-content: center;
+}
+@media (min-width: 660px) {
+  .upload__editor {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 45px;
+  }
+}
+@media (min-width: 980px) {
+  .upload__editor {
+    column-gap: 90px;
   }
 }
 

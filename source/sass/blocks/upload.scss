@@ -31,15 +31,20 @@
   }
 }
 
-// .upload__editor-container {
-//   justify-content: center;
+.upload__editor {
+  justify-content: center;
 
-//   @media (min-width: $tablet-min-width) {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: 1fr 1fr;
-//   }
-// }
+  @media (min-width: $tablet-min-width) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 45px;
+  }
+  
+  @media (min-width: $desktop-min-width) {
+    column-gap: 90px;
+  }
+}
 
 
 .upload__editor-picture {

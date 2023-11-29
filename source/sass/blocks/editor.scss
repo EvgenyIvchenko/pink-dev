@@ -1,13 +1,13 @@
 .editor {}
 
 .editor__picture {
-  display: grid;
-  justify-content: center;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
+  max-width: 280px;
 
   @media (min-width: $tablet-min-width) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    margin-bottom: 0;
+    max-width: 300px;
+    grid-row: 1/-1;
   }
 }
 
@@ -77,6 +77,14 @@
 
 .editor__submit {
   margin-bottom: 12px;
+
+  @media (min-width: $tablet-min-width) {
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-bottom: 0;
+  }
 }
 
 .editor__reset {}
