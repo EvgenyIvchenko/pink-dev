@@ -1,5 +1,9 @@
 .upload {
   background-color: $color-alternate;
+
+  @media (min-width: $desktop-min-width) {
+    display: grid;
+  }
 }
 
 .upload__container {}
@@ -16,7 +20,6 @@
   }
 }
 
-
 .upload__editor-wrapper {
   background-color: $color-bg-alternate;
   padding: 20px 0 40px;
@@ -27,7 +30,9 @@
   }
   
   @media (min-width: $desktop-min-width) {
-    padding: 57px 60px 57px 80px;
+    padding: 57px 40px 57px 60px;
+    margin: 0 auto;
+    min-width: 940px;
   }
 }
 
@@ -36,12 +41,14 @@
 
   @media (min-width: $tablet-min-width) {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 136px;
     column-gap: 45px;
   }
   
   @media (min-width: $desktop-min-width) {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr 55px;
     column-gap: 90px;
   }
 }

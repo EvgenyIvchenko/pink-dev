@@ -6,8 +6,14 @@
 
   @media (min-width: $tablet-min-width) {
     margin-bottom: 0;
-    max-width: 300px;
     grid-row: 1/-1;
+    max-width: none;
+    width: 300px;
+    justify-self: end;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    justify-self: start;
   }
 }
 
@@ -15,23 +21,90 @@
 
 .editor__list {
   margin-bottom: 40px;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   justify-content: center;
   align-items: center;
-  gap: 35px;
+  column-gap: 35px;
+
+  @media (min-width: $tablet-min-width) {
+    grid-auto-flow: row;
+    margin-bottom: 0;
+    justify-content: normal;
+    align-items: normal;
+    column-gap: 0;
+    row-gap: 10px;
+    max-height: 198px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    max-height: 214px;
+    row-gap: 14px;
+  }
 }
 
-.editor__item {}
+.editor__item {
+  &:last-child {
+    @media (min-width: $desktop-min-width) {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: $tablet-min-width) {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba($color-main, $alpha: 0.1);
+    padding: 9px 18px 24px 0;
+    max-width: 275px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    max-width: 100%;
+    padding: 0 30px 13px 0;
+  }
+}
+
+.editor__button-wrapper {
+  display: grid;
+  place-items: center;
+
+  @media (min-width: $tablet-min-width) {
+    margin-right: 31px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    margin-right: 44px;
+  }
+}
 
 .editor__toggle {
   display: grid;
   align-items: center;
   border: none;
   background: transparent;
+  padding: 0;
+
+  & svg {
+    @media (min-width: $tablet-min-width) {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: $desktop-min-width) {
+      width: 48px;
+      height: 48px;
+    }
+  }
 
   & path {
     fill: $color-main;
     opacity: 0.3;
+
+    @media (min-width: $tablet-min-width) {
+    fill: $color-accent;
+    opacity: 1;
+    }
   }
 
   &--active path {
@@ -40,22 +113,50 @@
   }
 }
 
+.editor__bar-tablet {
+  display: none;
+
+  @media (min-width: $tablet-min-width) {
+    display: grid;
+    min-width: 202px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 100%;
+  }
+}
+
 .editor__bar-mobile {
-  padding-bottom: 34px;
   display: grid;
+  position: relative;
+  padding-bottom: 34px;
+  margin-bottom: 38px;
 
   @media (min-width: $tablet-min-width) {
     display: none;
   }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 36px;
+    height: 1px;
+    box-shadow: 0 0 0 100vmax rgba($color-main, $alpha: 0.1);
+    clip-path: inset(0 -100vmax);
+  }
 }
 
 .editor__bar {
-  max-width: 240px;
-  width: 100%;
+  position: relative;
   height: 2px;
   background-color: $color-main;
   justify-self: center;
-  position: relative;
+  width: 100%;
+  max-width: 240px;
+
+  @media (min-width: $desktop-min-width) {
+    min-width: 288px;
+  }
 
   &::before {
     position: absolute;
@@ -73,18 +174,20 @@
 .editor__buttons {
   display: grid;
   justify-content: center;
-}
-
-.editor__submit {
-  margin-bottom: 12px;
-
+  row-gap: 12px;
+  
   @media (min-width: $tablet-min-width) {
-    margin-bottom: 24px;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
   }
 
   @media (min-width: $desktop-min-width) {
-    margin-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0;
+    column-gap: 44px;
   }
 }
+
+.editor__submit {}
 
 .editor__reset {}
