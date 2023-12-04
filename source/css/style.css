@@ -2201,12 +2201,19 @@ input[type=radio].visually-hidden {
 
 .preview {
   display: grid;
-  padding-bottom: 38px;
+  padding-top: 95px;
+  padding-bottom: 124px;
   background-color: #1d2631;
 }
 @media (min-width: 660px) {
   .preview {
     background-color: transparent;
+    padding-top: 212px;
+  }
+}
+@media (min-width: 980px) {
+  .preview {
+    padding-top: 224px;
   }
 }
 
@@ -2261,23 +2268,15 @@ input[type=radio].visually-hidden {
 }
 
 .preview__content {
-  padding-top: 95px;
   position: relative;
   width: 100%;
   justify-content: center;
 }
 @media (min-width: 660px) {
   .preview__content {
-    padding-top: 212px;
     display: flex;
   }
 }
-@media (min-width: 980px) {
-  .preview__content {
-    padding-top: 224px;
-  }
-}
-
 .preview__container {
   display: grid;
   justify-items: center;

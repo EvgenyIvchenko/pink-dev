@@ -1,10 +1,16 @@
 .preview {
   display: grid;
-  padding-bottom: 38px;
+  padding-top: 95px;
+  padding-bottom: 124px;
   background-color: $color-bg-download;
 
   @media (min-width: $tablet-min-width) {
     background-color: transparent;
+    padding-top: 212px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    padding-top: 224px;
   }
  }
 
@@ -55,18 +61,15 @@
 }
 
 .preview__content {
-  padding-top: 95px;
   position: relative;
   width: 100%;
   justify-content: center;
 
   @media (min-width: $tablet-min-width) {
-    padding-top: 212px;
     display: flex;
   }
   
   @media (min-width: $desktop-min-width) {
-    padding-top: 224px;
   }
 }
 
