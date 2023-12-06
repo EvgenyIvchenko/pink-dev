@@ -46,6 +46,12 @@
   @media (min-width: $desktop-min-width) {
     max-width: none;
   }
+
+  & li:nth-child(2) {
+    @media (min-width: $desktop-min-width) {
+      order: 1;
+    }
+  }
 }
 
 .contacts__item {

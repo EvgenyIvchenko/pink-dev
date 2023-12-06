@@ -1,7 +1,11 @@
 .fieldset-grey {
+  padding-top: 42px;
+  padding-bottom: 42px;
   background-color: $color-bg-alternate;
 
   @media (min-width: $tablet-min-width) {
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: transparent;
   }
 }

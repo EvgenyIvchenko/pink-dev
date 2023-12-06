@@ -1,6 +1,7 @@
 .form {
   margin-bottom: 18px;
   display: grid;
+  row-gap: 50px;
 
   @media (min-width: $desktop-min-width) {
     grid-template-columns: 1fr 1fr;
@@ -44,11 +45,12 @@
         grid-column: 1 / -1;
       }
 
-      & fieldset {
-        @media (min-width: $desktop-min-width) {
-          padding: 55px;
-        }
-      }
+      // & fieldset {
+      //   @media (min-width: $desktop-min-width) {
+      //     padding: 55px;
+      //     padding-bottom: 25px;
+      //   }
+      // }
 
       & ul {
         @media (min-width: $desktop-min-width) {
@@ -90,7 +92,11 @@
       }
       
       & fieldset {
-        padding-bottom: 45px;
+        padding-bottom: 0;
+
+        @media (min-width: $tablet-min-width) {
+          padding-bottom: 45px;
+        }
       }
     }
   
@@ -106,11 +112,6 @@
 
 .form__container {
   background-color: $color-alternate;
-  margin-bottom: 44px;
-
-  @media (min-width: $tablet-min-width) {
-    margin-bottom: 51px;
-  }
   
   @media (min-width: $desktop-min-width) {
     margin-bottom: 0;
@@ -143,15 +144,8 @@
 .form__fieldset-wrapper {}
 
 .form__single-wrapper {
-  padding-top: 42px;
-  padding-bottom: 42px;
   display: flex;
   flex-direction: column;
-
-  @media (min-width: $desktop-min-width) {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 .form__fieldset {}

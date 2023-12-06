@@ -10,9 +10,9 @@
   padding: 100px 46px 51px;
   background-image: url("../img/main-wrapper-mobile.jpg");
   background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  // top: 0;
+  // left: 0;
   width: 100%;
   min-width: 320px;
   min-height: 235px;
@@ -54,9 +54,8 @@
   
   &--gallery {
     @media (min-width: $desktop-min-width) {
-            max-width: 658px;
+      max-width: 658px;
     }
-  
   }
 }
 

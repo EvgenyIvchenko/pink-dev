@@ -1,16 +1,19 @@
 .preview {
   display: grid;
   padding-top: 95px;
-  padding-bottom: 124px;
+  padding-bottom: 38px;
   background-color: $color-bg-download;
+  position: relative;
 
   @media (min-width: $tablet-min-width) {
     background-color: transparent;
     padding-top: 212px;
+    padding-bottom: 119px;
   }
 
   @media (min-width: $desktop-min-width) {
     padding-top: 224px;
+    padding-bottom: 130px;
   }
  }
 
@@ -27,17 +30,16 @@
   background-image: url("../img/main-wrapper-mobile.jpg");
   background-size: cover;
   overflow: hidden;
-
+  
   @media (min-width: $tablet-min-width) {
     background-image: url("../img/main-wrapper-tablet.jpg");
     background-size: cover;
-    height: 729px;
+    height: 100%;
   }
 
   @media (min-width: $desktop-min-width) {
     background-image: url("../img/main-wrapper-desktop.jpg");
     background-size: cover;
-    height: 853px;
     padding-left: 144px;
   }
 }
@@ -67,9 +69,6 @@
 
   @media (min-width: $tablet-min-width) {
     display: flex;
-  }
-  
-  @media (min-width: $desktop-min-width) {
   }
 }
 

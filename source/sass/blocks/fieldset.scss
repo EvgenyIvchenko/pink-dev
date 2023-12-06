@@ -8,7 +8,12 @@
   }
 
   @media (min-width: $desktop-min-width) {
-    padding: 62px 58px 23px;
+    padding: 53px 58px 23px;
+  }
+
+  &--mobile {
+    padding-bottom: 0;
+    padding-top: 39px;
   }
 }
 
@@ -55,11 +60,13 @@
 }
 
 .fieldset__message {
+  resize: none;
   padding: 20px;
+  border: 2px solid $color-bg-info;
   
   &::placeholder {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 18px;
     color: $color-main;
   }
 }

@@ -522,12 +522,12 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 660px) {
   .advantages {
-    padding-top: 135px;
+    padding-top: 58px;
   }
 }
 @media (min-width: 980px) {
   .advantages {
-    padding-top: 154px;
+    padding-top: 77px;
   }
 }
 
@@ -856,6 +856,11 @@ input[type=radio].visually-hidden {
 @media (min-width: 980px) {
   .contacts__list {
     max-width: none;
+  }
+}
+@media (min-width: 980px) {
+  .contacts__list li:nth-child(2) {
+    order: 1;
   }
 }
 
@@ -1204,10 +1209,10 @@ input[type=radio].visually-hidden {
   .field__wrapper-phone::before {
     position: absolute;
     content: "";
-    top: 2px;
+    top: 1px;
     right: 1px;
-    width: 70px;
-    height: 68px;
+    width: 66px;
+    height: 66px;
     border-radius: 1px;
     background-color: #e5e5e5;
   }
@@ -1216,8 +1221,8 @@ input[type=radio].visually-hidden {
   .field__wrapper-phone::after {
     position: absolute;
     content: "";
-    top: 26px;
-    right: 26px;
+    top: 24px;
+    right: 23px;
     width: 20px;
     height: 19px;
     background-color: transparent;
@@ -1229,10 +1234,10 @@ input[type=radio].visually-hidden {
   .field__wrapper-mail::before {
     position: absolute;
     content: "";
-    top: 2px;
-    right: 2px;
-    width: 70px;
-    height: 68px;
+    top: 1px;
+    right: 1px;
+    width: 66px;
+    height: 66px;
     border-radius: 1px;
     background-color: #e5e5e5;
   }
@@ -1241,8 +1246,8 @@ input[type=radio].visually-hidden {
   .field__wrapper-mail::after {
     position: absolute;
     content: "";
-    top: 29px;
-    right: 26px;
+    top: 27px;
+    right: 24px;
     width: 18px;
     height: 13px;
     background-color: transparent;
@@ -1270,38 +1275,60 @@ input[type=radio].visually-hidden {
     padding-left: 0;
   }
 }
-.field__label--phone {
-  padding-top: 22px;
+@media (min-width: 660px) {
+  .field__label--phone {
+    padding-top: 22px;
+  }
 }
 
 .field__input {
-  padding: 22px 20px;
+  padding: 20px;
   border-radius: 1px;
   border: 2px solid #e5e5e5;
   font-size: 18px;
   line-height: 18px;
   width: 100%;
 }
-.field__input--phone {
-  padding-right: 92px;
-}
-.field__input--mail {
-  padding-right: 92px;
-}
-.field__input::placeholder {
-  color: #283645;
-}
 @media (min-width: 660px) {
   .field__input {
     width: 100%;
   }
 }
+.field__input:hover, .field__input:focus {
+  border-radius: 1px;
+  border: 2px solid #283645;
+  outline: none;
+  z-index: 1;
+  background: transparent;
+}
+.field__input:active {
+  border-color: #d22856;
+  outline: none;
+  z-index: 1;
+}
+.field__input::placeholder {
+  color: #283645;
+}
+@media (min-width: 660px) {
+  .field__input--phone {
+    padding-right: 92px;
+  }
+}
+@media (min-width: 660px) {
+  .field__input--mail {
+    padding-right: 92px;
+  }
+}
 
 .fieldset-grey {
+  padding-top: 42px;
+  padding-bottom: 42px;
   background-color: #f2f2f2;
 }
 @media (min-width: 660px) {
   .fieldset-grey {
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: transparent;
   }
 }
@@ -1318,8 +1345,12 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 980px) {
   .fieldset {
-    padding: 62px 58px 23px;
+    padding: 53px 58px 23px;
   }
+}
+.fieldset--mobile {
+  padding-bottom: 0;
+  padding-top: 39px;
 }
 
 .fieldset__legend {
@@ -1365,11 +1396,13 @@ input[type=radio].visually-hidden {
 }
 
 .fieldset__message {
+  resize: none;
   padding: 20px;
+  border: 2px solid #e5e5e5;
 }
 .fieldset__message::placeholder {
   font-size: 18px;
-  line-height: 30px;
+  line-height: 18px;
   color: #283645;
 }
 
@@ -1467,6 +1500,7 @@ input[type=radio].visually-hidden {
 .form {
   margin-bottom: 18px;
   display: grid;
+  row-gap: 50px;
 }
 @media (min-width: 980px) {
   .form {
@@ -1510,11 +1544,6 @@ input[type=radio].visually-hidden {
   }
 }
 @media (min-width: 980px) {
-  .form div:nth-child(3) fieldset {
-    padding: 55px;
-  }
-}
-@media (min-width: 980px) {
   .form div:nth-child(3) ul {
     grid-template-columns: 1fr 1fr;
     column-gap: 74px;
@@ -1552,7 +1581,12 @@ input[type=radio].visually-hidden {
   }
 }
 .form div:nth-child(5) fieldset {
-  padding-bottom: 45px;
+  padding-bottom: 0;
+}
+@media (min-width: 660px) {
+  .form div:nth-child(5) fieldset {
+    padding-bottom: 45px;
+  }
 }
 .form div:nth-child(6) {
   order: 6;
@@ -1565,12 +1599,6 @@ input[type=radio].visually-hidden {
 
 .form__container {
   background-color: #ffffff;
-  margin-bottom: 44px;
-}
-@media (min-width: 660px) {
-  .form__container {
-    margin-bottom: 51px;
-  }
 }
 @media (min-width: 980px) {
   .form__container {
@@ -1605,16 +1633,8 @@ input[type=radio].visually-hidden {
 }
 
 .form__single-wrapper {
-  padding-top: 42px;
-  padding-bottom: 42px;
   display: flex;
   flex-direction: column;
-}
-@media (min-width: 980px) {
-  .form__single-wrapper {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 .form__submit-wrapper {
@@ -1643,20 +1663,6 @@ input[type=radio].visually-hidden {
 
 .form__required-mobile {
   color: #d22856;
-}
-
-.gallery {
-  padding-top: 235px;
-}
-@media (min-width: 660px) {
-  .gallery {
-    padding-top: 440px;
-  }
-}
-@media (min-width: 980px) {
-  .gallery {
-    padding-top: 394px;
-  }
 }
 
 .gallery__top-container {
@@ -1704,6 +1710,20 @@ input[type=radio].visually-hidden {
   }
 }
 
+.gallery__post-container {
+  max-width: 320px;
+}
+@media (min-width: 660px) {
+  .gallery__post-container {
+    max-width: 660px;
+  }
+}
+@media (min-width: 980px) {
+  .gallery__post-container {
+    max-width: 980px;
+  }
+}
+
 .gallery__list {
   display: grid;
   gap: 20px;
@@ -1727,12 +1747,12 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 660px) {
   .gallery__img-wrapper {
-    padding-bottom: 64.5%;
+    padding-bottom: 100%;
   }
 }
 @media (min-width: 980px) {
   .gallery__img-wrapper {
-    padding-bottom: 64.5%;
+    padding-bottom: 133.3%;
   }
 }
 
@@ -1798,9 +1818,7 @@ input[type=radio].visually-hidden {
   padding: 100px 46px 51px;
   background-image: url("../img/main-wrapper-mobile.jpg");
   background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   min-width: 320px;
   min-height: 235px;
@@ -1860,6 +1878,7 @@ input[type=radio].visually-hidden {
   box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
   border-radius: 1px;
   min-width: 320px;
+  z-index: 11;
 }
 @media (min-width: 660px) {
   .modal {
@@ -1945,6 +1964,12 @@ input[type=radio].visually-hidden {
   padding-top: 52px;
   border-radius: 0 0 1px 1px;
   background-color: #f2f2f2;
+}
+
+@media (min-width: 980px) {
+  .modal__success-wrapper .modal__close {
+    min-width: 456px;
+  }
 }
 
 .nav {
@@ -2047,7 +2072,6 @@ input[type=radio].visually-hidden {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -2202,18 +2226,21 @@ input[type=radio].visually-hidden {
 .preview {
   display: grid;
   padding-top: 95px;
-  padding-bottom: 124px;
+  padding-bottom: 38px;
   background-color: #1d2631;
+  position: relative;
 }
 @media (min-width: 660px) {
   .preview {
     background-color: transparent;
     padding-top: 212px;
+    padding-bottom: 119px;
   }
 }
 @media (min-width: 980px) {
   .preview {
     padding-top: 224px;
+    padding-bottom: 130px;
   }
 }
 
@@ -2235,14 +2262,13 @@ input[type=radio].visually-hidden {
   .preview__image-wrapper {
     background-image: url("../img/main-wrapper-tablet.jpg");
     background-size: cover;
-    height: 729px;
+    height: 100%;
   }
 }
 @media (min-width: 980px) {
   .preview__image-wrapper {
     background-image: url("../img/main-wrapper-desktop.jpg");
     background-size: cover;
-    height: 853px;
     padding-left: 144px;
   }
 }
@@ -2277,6 +2303,7 @@ input[type=radio].visually-hidden {
     display: flex;
   }
 }
+
 .preview__container {
   display: grid;
   justify-items: center;
@@ -2617,16 +2644,15 @@ input[type=radio].visually-hidden {
 
 .survey {
   background-color: #ffffff;
-  padding-top: 289px;
+  padding-top: 54px;
 }
 @media (min-width: 660px) {
   .survey {
-    padding-top: 539px;
+    padding-top: 100px;
   }
 }
 @media (min-width: 980px) {
   .survey {
-    padding-top: 504px;
     display: grid;
     justify-content: center;
   }
