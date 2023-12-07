@@ -10,17 +10,27 @@
 }
 
 .slider-dots__item {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    background-color: $color-main;
-    opacity: 0.3;
-    cursor: pointer;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background-color: $color-main;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.3s;
 
-    &--current {
-        opacity: 1;
-        background-color: #fff;
-        border-color: $color-main;
-    }
+  &:hover,
+  &:focus {
+    opacity: 0.6;
   }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &--current {
+      opacity: 1;
+      background-color: #fff;
+      border-color: $color-main;
+  }
+}

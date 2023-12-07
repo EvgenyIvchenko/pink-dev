@@ -84,32 +84,53 @@
   border: none;
   background: transparent;
   padding: 0;
+}
 
-  & svg {
-    @media (min-width: $tablet-min-width) {
-      width: 24px;
-      height: 24px;
-    }
+.editor__toggle-icon {
+  transition: opacity 0.3s;
 
-    @media (min-width: $desktop-min-width) {
-      width: 48px;
-      height: 48px;
-    }
+  @media (max-width: $mobile-max-width) {
+    opacity: 0.3;
   }
 
   & path {
-    fill: $color-main;
-    opacity: 0.3;
-
-    @media (min-width: $tablet-min-width) {
     fill: $color-accent;
     opacity: 1;
+    transition: fill 0.3s;
+    
+    @media (max-width: $mobile-max-width) {
+      fill: $color-main;
     }
   }
 
-  &--active path {
-    fill: $color-accent;
+  &:hover,
+  &:focus {
+    @media (max-width: $mobile-max-width) {
+      opacity: 0.5;
+    }
+  }
+
+  @media (min-width: $tablet-min-width) {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: $desktop-min-width) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.editor__icon--active {
+  opacity: 1;
+
+  &:hover,
+  &:focus {
     opacity: 1;
+  }
+
+  & path {
+    fill: $color-accent;
   }
 }
 
@@ -168,6 +189,11 @@
     border: 2px solid $color-accent;
     background-color: $color-alternate;
     border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  &:hover::before {
+    background-color: $color-accent;
   }
 }
 
@@ -188,6 +214,38 @@
   }
 }
 
-.editor__submit {}
+.editor__submit {
+  transition: 
+              opacity 0.3s,
+              color 0.3s,
+              background-color 0.3s;
 
-.editor__reset {}
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+    color: $color-alternate;
+  }
+
+  &:active {
+    color: rgb(255 255 255 / 0.3);
+  }
+}
+
+.editor__reset {
+  color: $color-main;
+  opacity: 0.1;
+  transition: 
+              opacity 0.3s,
+              color 0.3s,
+              background-color 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: $color-main;
+    color: rgb(255 255 255 / 0.3);
+  }
+}

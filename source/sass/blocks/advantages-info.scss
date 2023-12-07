@@ -96,7 +96,13 @@
     text-decoration-line: underline;
   }
 
-  @media (min-width: $desktop-min-width) {
+  @media (min-width: $tablet-min-width) {
+    max-width: 226px;
+  }
 
+  @media (min-width: $desktop-min-width) {
+    font-size: 18px;
+    line-height: 18px;
+    max-width: 290px;
   }
 }

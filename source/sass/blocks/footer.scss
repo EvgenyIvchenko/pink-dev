@@ -17,10 +17,6 @@
   @media (min-width: $tablet-min-width) {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
-  @media (min-width: $desktop-min-width) {
-
-  }
 }
 
 .footer__logo {
@@ -43,6 +39,29 @@
 .footer__logo-text {
   width: 74px;
   height: 23px;
+  transition: 
+              opacity 0.3s,
+              color 0.3s,
+              background-color 0.3s;
+
+  & path {
+    transition: fill 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    & path {
+      fill: $color-accent;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & path {
+      fill: $color-main;
+    }
+  }
 }
 
 .footer__list {
@@ -67,6 +86,19 @@
   height: 56px;
   border-radius: 50%;
   border: 3px solid rgb(40 54 69 / 10%);
+  transition: 
+              opacity 0.3s,
+              border-color 0.3s,
+              color 0.3s;
+              
+  &:hover,
+  &:focus {
+    border: 3px solid $color-main;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 
   img {
     width: 18px;
@@ -82,6 +114,25 @@
 
   @media (min-width: $tablet-min-width) {
     justify-self: end;
+  }
+}
+
+.footer__academy-logo {
+  transition: opacity 0.3s;
+
+  & path {
+    transition: fill 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    & path {
+      fill: $color-main;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

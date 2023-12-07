@@ -2,6 +2,7 @@
   margin-bottom: 18px;
   display: grid;
   row-gap: 50px;
+  width: 100%;
 
   @media (min-width: $desktop-min-width) {
     grid-template-columns: 1fr 1fr;
@@ -44,13 +45,6 @@
       @media (min-width: $desktop-min-width) {
         grid-column: 1 / -1;
       }
-
-      // & fieldset {
-      //   @media (min-width: $desktop-min-width) {
-      //     padding: 55px;
-      //     padding-bottom: 25px;
-      //   }
-      // }
 
       & ul {
         @media (min-width: $desktop-min-width) {

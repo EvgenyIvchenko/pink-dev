@@ -81,6 +81,20 @@
   line-height: 24px;
   color: $color-accent;
   max-width: 245px;
+  transition: 
+              opacity 0.3s,
+              color 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $color-main;
+    text-decoration: underline;
+  }
+
+  &:active {
+    text-decoration: none;
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {

@@ -25,6 +25,7 @@
 
 .field__radio {
   padding-left: 70px;
+  cursor: pointer;
   
   &::before {
     position: absolute;
@@ -37,6 +38,7 @@
     border-radius: 50%;
     border: 2px solid $color-bg-info;
     transform: translateY(-50%);
+    transition: border-color 0.3s;
   }
   
   &::after {
@@ -51,10 +53,20 @@
     transform: translateY(-50%);
     opacity: 0;
   }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $color-main;
+  }
+
+  &:active::before {
+    border-color: $color-accent;
+  }
 }
 
 .field__checkbox {
   padding-left: 59px;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -67,6 +79,8 @@
     border-radius: 1px;
     border: 2px solid $color-bg-info;
     transform: translateY(-50%);
+    transition: border-color 0.3s;
+
   }
   
   &::after {
@@ -81,6 +95,15 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    border-color: $color-main;
+  }
+
+  &:active::before {
+    border-color: $color-accent;
   }
 }
 
@@ -186,6 +209,7 @@
   font-size: 18px;
   line-height: 18px;
   width: 100%;
+  transition: border-color 0.3s;
   
   @media (min-width: $tablet-min-width) {
     width: 100%;

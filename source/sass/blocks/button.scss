@@ -33,10 +33,30 @@
     background-color: $color-button-form;
     border: 2px solid $color-button-form;
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: 3px;
     width: 100%;
     max-width: 296px;
+    transition: 
+                opacity 0.3s,
+                color 0.3s,
+                border-color 0.3s,
+                background-color 0.3s;
+
+    &:hover,
+    &:focus {
+      background-color: #1C9B5E;
+      border-color: #1C9B5E;
     }
+
+    &:active {
+      color: rgb(255 255 255 / 0.3);
+    }
+
+    &:disabled {
+      background-color: $color-bg-info;
+      border-color: $color-bg-info;
+    }
+  }
   
   &--disabled {
     border: 3px solid $color-main;
