@@ -39,8 +39,10 @@
     overflow: hidden;
     width: 300px;
     height: 294px;
+    z-index: 1;
    }
 }
+
 .advantage__image {
    @media (min-width: $desktop-min-width) {
     width: 300px;

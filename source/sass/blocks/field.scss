@@ -126,10 +126,10 @@
     @media (min-width: $tablet-min-width) {
       position: absolute;
       content: "";
-      top: 1px;
-      right: 1px;
-      width: 66px;
-      height: 66px;
+      top: 2px;
+      right: 2px;
+      width: 64px;
+      height: 64px;
       border-radius: 1px;
       background-color: $color-bg-info;
     }
@@ -139,7 +139,7 @@
     @media (min-width: $tablet-min-width) {
       position: absolute;
       content: "";
-      top: 24px;
+      top: 25px;
       right: 23px;
       width: 20px;
       height: 19px;
@@ -154,10 +154,10 @@
     @media (min-width: $tablet-min-width) {
       position: absolute;
       content: "";
-      top: 1px;
-      right: 1px;
-      width: 66px;
-      height: 66px;
+      top: 2px;
+      right: 2px;
+      width: 64px;
+      height: 64px;
       border-radius: 1px;
       background-color: $color-bg-info;
     }
@@ -167,8 +167,8 @@
     @media (min-width: $tablet-min-width) {
       position: absolute;
       content: "";
-      top: 27px;
-      right: 24px;
+      top: 28px;
+      right: 23px;
       width: 18px;
       height: 13px;
       background-color: transparent;
@@ -220,14 +220,11 @@
     border-radius: 1px;
     border: 2px solid $color-main;
     outline: none;
-    z-index: 1;
-    background: transparent;
   }
   
   &:active {
     border-color: $color-accent;
     outline: none;
-    z-index: 1;
   }
 
   &::placeholder {
@@ -236,13 +233,13 @@
 
   &--phone {
     @media (min-width: $tablet-min-width) {
-      padding-right: 92px;
+      padding-right: 84px;
     }
   }
 
   &--mail {
     @media (min-width: $tablet-min-width) {
-      padding-right: 92px;
+      padding-right: 84px;
     }
   }
 }
