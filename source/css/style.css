@@ -520,6 +520,7 @@ input[type=radio].visually-hidden {
 
 .advantages {
   padding-top: 46px;
+  overflow: hidden;
 }
 @media (min-width: 660px) {
   .advantages {
@@ -1073,6 +1074,18 @@ input[type=radio].visually-hidden {
   padding: 0;
 }
 
+@media (max-width: 659px) {
+  .editor__toggle:hover .editor__toggle-icon,
+.editor__toggle:focus .editor__toggle-icon {
+    opacity: 0.5;
+  }
+}
+
+.editor__toggle:hover .editor__icon--active,
+.editor__toggle:focus .editor__icon--active {
+  opacity: 1;
+}
+
 .editor__toggle-icon {
   transition: opacity 0.3s;
 }
@@ -1091,11 +1104,6 @@ input[type=radio].visually-hidden {
     fill: #283645;
   }
 }
-@media (max-width: 659px) {
-  .editor__toggle-icon:hover, .editor__toggle-icon:focus {
-    opacity: 0.5;
-  }
-}
 @media (min-width: 660px) {
   .editor__toggle-icon {
     width: 24px;
@@ -1110,9 +1118,6 @@ input[type=radio].visually-hidden {
 }
 
 .editor__icon--active {
-  opacity: 1;
-}
-.editor__icon--active:hover, .editor__icon--active:focus {
   opacity: 1;
 }
 .editor__icon--active path {
@@ -1523,13 +1528,13 @@ input[type=radio].visually-hidden {
 }
 
 .fieldset__message {
+  font-size: 18px;
+  line-height: 18px;
   resize: none;
   padding: 20px;
   border: 2px solid #e5e5e5;
 }
 .fieldset__message::placeholder {
-  font-size: 18px;
-  line-height: 18px;
   color: #283645;
 }
 
@@ -1569,6 +1574,18 @@ input[type=radio].visually-hidden {
   }
 }
 
+.footer__logo:hover .footer__logo-text path,
+.footer__logo:focus .footer__logo-text path {
+  fill: #d22856;
+}
+
+.footer__logo:active .footer__logo-text {
+  opacity: 0.3;
+}
+.footer__logo:active .footer__logo-text path {
+  fill: #283645;
+}
+
 .footer__logo-image {
   width: 59px;
   height: 40px;
@@ -1582,15 +1599,6 @@ input[type=radio].visually-hidden {
 }
 .footer__logo-text path {
   transition: fill 0.3s;
-}
-.footer__logo-text:hover path, .footer__logo-text:focus path {
-  fill: #d22856;
-}
-.footer__logo-text:active {
-  opacity: 0.3;
-}
-.footer__logo-text:active path {
-  fill: #283645;
 }
 
 .footer__list {
@@ -1639,23 +1647,26 @@ input[type=radio].visually-hidden {
   }
 }
 
+.footer__academy-link {
+  margin-left: 15px;
+  width: 27px;
+  height: 34px;
+}
+
+.footer__academy-link:hover .footer__academy-logo path,
+.footer__academy-link:focus .footer__academy-logo path {
+  fill: #283645;
+}
+
+.footer__academy-link:hover .footer__academy-logo:active {
+  opacity: 0.3;
+}
+
 .footer__academy-logo {
   transition: opacity 0.3s;
 }
 .footer__academy-logo path {
   transition: fill 0.3s;
-}
-.footer__academy-logo:hover path, .footer__academy-logo:focus path {
-  fill: #283645;
-}
-.footer__academy-logo:active {
-  opacity: 0.3;
-}
-
-.footer__academy-link {
-  margin-left: 15px;
-  width: 27px;
-  height: 34px;
 }
 
 .form {
@@ -1939,7 +1950,6 @@ input[type=radio].visually-hidden {
 }
 
 .header__logo {
-  display: none;
   position: relative;
   z-index: 1;
   align-self: center;
@@ -1958,18 +1968,27 @@ input[type=radio].visually-hidden {
   fill: #ffffff;
 }
 
+.header__logo-mobile {
+  display: none;
+}
 @media (max-width: 659px) {
   .header__logo-mobile {
     display: flex;
   }
 }
 
+.header__logo-tablet {
+  display: none;
+}
 @media (min-width: 660px) and (max-width: 979px) {
   .header__logo-tablet {
     display: flex;
   }
 }
 
+.header__logo-desktop {
+  display: none;
+}
 @media (min-width: 980px) {
   .header__logo-desktop {
     display: flex;
@@ -2157,27 +2176,27 @@ input[type=radio].visually-hidden {
   padding: 0;
   border: 0;
   background: transparent;
+  transition: opacity 0.3s;
 }
 @media (min-width: 980px) {
   .nav__toggle {
     display: none;
   }
 }
+.nav__toggle path {
+  transition: fill 0.3s;
+}
+.nav__toggle:hover path, .nav__toggle:focus path {
+  fill: #d22856;
+}
+.nav__toggle:active {
+  opacity: 0.3;
+}
 
 .nav__toggle--closed {
   display: grid;
   width: 50px;
   height: 24px;
-  transition: opacity 0.3s;
-}
-.nav__toggle--closed path {
-  transition: fill 0.3s;
-}
-.nav__toggle--closed:hover path, .nav__toggle--closed:focus path {
-  fill: #d22856;
-}
-.nav__toggle--closed:active {
-  opacity: 0.3;
 }
 
 .nav__toggle--opened {
@@ -2186,16 +2205,6 @@ input[type=radio].visually-hidden {
   vertical-align: middle;
   width: 24px;
   height: 24px;
-  transition: opacity 0.3s;
-}
-.nav__toggle--opened path {
-  transition: fill 0.3s;
-}
-.nav__toggle--opened:hover path, .nav__toggle--opened:focus path {
-  fill: #d22856;
-}
-.nav__toggle--opened:active {
-  opacity: 0.3;
 }
 
 .nav__wrapper {

@@ -60,13 +60,13 @@
 }
 
 .fieldset__message {
+  font-size: 18px;
+  line-height: 18px;
   resize: none;
   padding: 20px;
   border: 2px solid $color-bg-info;
   
   &::placeholder {
-    font-size: 18px;
-    line-height: 18px;
     color: $color-main;
   }
 }

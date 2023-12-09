@@ -30,6 +30,21 @@
   }
 }
 
+.footer__logo:hover .footer__logo-text,
+.footer__logo:focus .footer__logo-text {
+  & path {
+    fill: $color-accent;
+  }
+}
+
+.footer__logo:active .footer__logo-text {
+  opacity: 0.3;
+
+  & path {
+    fill: $color-main;
+  }
+}
+
 .footer__logo-image {
   width: 59px;
   height: 40px;
@@ -46,21 +61,6 @@
 
   & path {
     transition: fill 0.3s;
-  }
-
-  &:hover,
-  &:focus {
-    & path {
-      fill: $color-accent;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-
-    & path {
-      fill: $color-main;
-    }
   }
 }
 
@@ -117,27 +117,29 @@
   }
 }
 
+.footer__academy-link {
+  margin-left: 15px;
+  width: 27px;
+  height: 34px;
+}
+
+.footer__academy-link:hover .footer__academy-logo,
+.footer__academy-link:focus .footer__academy-logo {
+  & path {
+    fill: $color-main;
+  }
+}
+
+.footer__academy-link:hover .footer__academy-logo {
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .footer__academy-logo {
   transition: opacity 0.3s;
 
   & path {
     transition: fill 0.3s;
   }
-
-  &:hover,
-  &:focus {
-    & path {
-      fill: $color-main;
-    }
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.footer__academy-link {
-  margin-left: 15px;
-  width: 27px;
-  height: 34px;
 }

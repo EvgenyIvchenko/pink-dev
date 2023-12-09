@@ -86,6 +86,18 @@
   padding: 0;
 }
 
+.editor__toggle:hover .editor__toggle-icon,
+.editor__toggle:focus .editor__toggle-icon {
+  @media (max-width: $mobile-max-width) {
+    opacity: 0.5;
+  }
+}
+
+.editor__toggle:hover .editor__icon--active,
+.editor__toggle:focus .editor__icon--active {
+  opacity: 1;
+}
+
 .editor__toggle-icon {
   transition: opacity 0.3s;
 
@@ -103,13 +115,6 @@
     }
   }
 
-  &:hover,
-  &:focus {
-    @media (max-width: $mobile-max-width) {
-      opacity: 0.5;
-    }
-  }
-
   @media (min-width: $tablet-min-width) {
     width: 24px;
     height: 24px;
@@ -123,11 +128,6 @@
 
 .editor__icon--active {
   opacity: 1;
-
-  &:hover,
-  &:focus {
-    opacity: 1;
-  }
 
   & path {
     fill: $color-accent;
