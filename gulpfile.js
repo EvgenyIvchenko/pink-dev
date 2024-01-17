@@ -9,11 +9,12 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import imagemin, { mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import webp from 'gulp-webp';
+import svgstore from 'gulp-svgstore';
 import { deleteAsync } from 'del';
 import browser from 'browser-sync';
 
-// Remove
-export const remove = () => {
+// Clean
+export const clean = () => {
   return deleteAsync('build');
 }
 
@@ -44,8 +45,8 @@ export const html = () => {
     .pipe(gulp.dest('build'));
 }
 
-// Script
-export const script = () => {
+// Scripts
+export const scripts = () => {
   return gulp.src('source/js/script.js')
     .pipe(terser())
     .pipe(rename('script.min.js'))
@@ -75,10 +76,20 @@ export const optimizeImages = () => {
 }
 
 // Webp
-export const convertWebp = () => {
+export const createWebp = () => {
   return gulp.src('source/img/*.{jpg,png}')
-  .pipe(webp({ quality: 100 }))
-  .pipe(gulp.dest('build/img'));
+    .pipe(webp({ quality: 100 }))
+    .pipe(gulp.dest('build/img'));
+}
+
+// Sprite
+export const sprite = () => {
+  return gulp.src('source/img/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('build/img'));
 }
 
 // Server
@@ -96,13 +107,13 @@ const server = (done) => {
 
 // Watcher
 const watcher = () => {
-  gulp.watch('source/img/**/*{jpg,png}', gulp.series(copyImages, convertWebp, browser.reload));
+  gulp.watch('source/img/**/*{jpg,png}', gulp.series(copyImages, createWebp, browser.reload));
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html', gulp.series(html, browser.reload));
 }
 
-const build = gulp.series(remove, copy, optimizeImages, convertWebp, styles, html)
-const dev = gulp.series(remove, copy, copyImages, convertWebp, styles, html, server, watcher)
+const build = gulp.series(clean, copy, optimizeImages, gulp.parallel(styles, html, sprite, createWebp)) // без скриптов
+const dev = gulp.series(clean, copy, copyImages, createWebp, styles, html, server, watcher) // без скрипта
 
 gulp.task('default', dev);
 
