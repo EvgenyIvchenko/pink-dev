@@ -95,7 +95,10 @@
       <section class="preview">
         <div class="preview__image-wrapper">
           <picture>
-            <source media="(min-width: 980px)" srcset="./img/preview-image-desktop.png">
+            <source media="(min-width: 980px)" srcset="./img/preview-image-desktop.webp" type="image/webp">
+            <source media="(min-width: 660px)" srcset="./img/preview-image-tablet.webp" type="image/webp">
+            <source srcset="./img/preview-image-mobile.webp" type="image/webp">
+            <source media="(min-width: 980px)" srcset="./img/preview-image-desktop.npg">
             <source media="(min-width: 660px)" srcset="./img/preview-image-tablet.png">
             <img class="preview__image" src="./img/preview-image-mobile.png" width="320" height="286" alt="Телефон в руке">
           </picture>
@@ -146,21 +149,30 @@
               <li class="advantages__item advantage">
                 <h3 class="advantage__title">Поднимает настроение</h3>
                 <div class="advantage__wrapper-image">
-                  <img class="advantage__image" src="./img/advantages-iphone1-desktop.png" width="186" height="382" alt="Черно-белое фото">
+                  <picture>
+                    <source srcset="./img/advantages-iphone1-desktop.webp" type="image/webp">
+                    <img class="advantage__image" src="./img/advantages-iphone1-desktop.png" width="186" height="382" alt="Черно-белое фото">
+                  </picture>
                 </div>
                 <p class="advantage__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               </li>
               <li class="advantages__item advantage">
                 <h3 class="advantage__title">Меняет мир вокруг</h3>
                 <div class="advantage__wrapper-image">
-                  <img class="advantage__image" src="./img/advantages-iphone2-desktop.png" width="186" height="382" alt="Розовое фото">
+                  <picture>
+                    <source srcset="./img/advantages-iphone2-desktop.webp" type="image/webp">
+                    <img class="advantage__image" src="./img/advantages-iphone2-desktop.png" width="186" height="382" alt="Розовое фото">
+                  </picture>
                 </div>
                 <p class="advantage__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
               </li>
               <li class="advantages__item advantage advantage--current">
                 <h3 class="advantage__title">Заводит новых друзей</h3>
                 <div class="advantage__wrapper-image">
-                  <img class="advantage__image" src="./img/advantages-iphone3-desktop.png" width="186" height="382" alt="Розовое фото с текстом">
+                  <picture>
+                    <source srcset="./img/advantages-iphone3-desktop.webp" type="image/webp">
+                    <img class="advantage__image" src="./img/advantages-iphone3-desktop.png" width="186" height="382" alt="Розовое фото с текстом">
+                  </picture>
                 </div>
                 <p class="advantage__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
@@ -168,6 +180,8 @@
 
             <div class="advantages__image">
               <picture>
+                <source media="(min-width: 660px)" srcset="./img/advantages-iphone-tablet.webp" type="image/webp">
+                <source srcset="./img/advantages-iphone-mobile.webp" type="image/webp">
                 <source media="(min-width: 660px)" srcset="./img/advantages-iphone-tablet.png">
                 <img src="./img/advantages-iphone-mobile.png" width="157" height="320" alt="Айфон 3">
               </picture>
@@ -193,7 +207,7 @@
 
           <div class="reviews__slider">
             <div class="reviews__wrapper">
-              
+
               <ul class="reviews__list">
                 <li class="reviews__item reviews__item--current">
                   <blockquote class="review">
@@ -226,7 +240,7 @@
                   </blockquote>
                 </li>
               </ul>
-              
+
               <div class="reviews__buttons">
                 <button class="reviews__button slider-button" type="button">
                   <span class="visually-hidden">Предыдущий слайд</span>
@@ -340,6 +354,9 @@
         <div class="contacts__map">
           <div class="contacts__map-wrapper">
             <picture>
+              <source media="(min-width: 980px)" srcset="./img/contacts-map-desktop.webp" type="image/webp">
+              <source media="(min-width: 660px)" srcset="./img/contacts-map-tablet.webp" type="image/webp">
+              <source srcset="./img/contacts-map-mobile.webp" type="image/webp">
               <source media="(min-width: 980px)" srcset="./img/contacts-map-desktop.jpg">
               <source media="(min-width: 660px)" srcset="./img/contacts-map-tablet.jpg">
               <img src="./img/contacts-map-mobile.jpg" width="320" height="200" alt="Мы на карте">
@@ -392,5 +409,11 @@
         </p>
       </div>
     </footer>
+    <div class="kek">
+      <svg width="22" height="16" aria-hidden="true">
+        <use xlink:href="img/sprite.svg#field-checked"></use>
+      </svg>
+    </div>
+    <script src="js/main.min.js"></script>
   </body>
 </html>
