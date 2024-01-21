@@ -23,21 +23,22 @@
   align-self: center;
   transition: opacity 0.3s;
 
-  & path {
+  svg {
+    fill: $color-alternate;
     transition: fill 0.3s;
   }
 
-  &:hover,
-  &:focus {
-    & path {
+  &[href]:hover,
+  &[href]:focus {
+    svg {
       fill: $color-accent;
     }
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
 
-    & path {
+    svg {
       fill: $color-alternate;
     }
   }
@@ -61,7 +62,7 @@
 
 .header__logo-desktop {
   display: none;
-  
+
   @media (min-width: $desktop-min-width) {
     display: flex;
   }

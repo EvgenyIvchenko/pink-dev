@@ -14,13 +14,14 @@
     display: none;
   }
   
-  & path {
+  & svg {
+    fill: $color-alternate;
     transition: fill 0.3s;
   }
   
   &:hover,
   &:focus {
-    & path {
+    & svg {
       fill: $color-accent;
     }
   }
@@ -32,7 +33,7 @@
 
 .nav__toggle--closed {
   display: grid;
-  // display: none;
+  display: none;
   width: 50px;
   height: 24px;
 }

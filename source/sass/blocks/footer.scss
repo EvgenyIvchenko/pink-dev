@@ -23,6 +23,11 @@
   display: flex;
   align-items: center;
   margin-bottom: 41px;
+  transition: 
+              opacity 0.3s,
+              color 0.3s,
+              fill 2s,
+              background-color 0.3s;
 
   @media (min-width: $tablet-min-width) {
     margin-bottom: 0;
@@ -30,17 +35,16 @@
   }
 }
 
-.footer__logo:hover .footer__logo-text,
-.footer__logo:focus .footer__logo-text {
-  & path {
-    fill: $color-accent;
-  }
+.footer__logo:hover svg,
+.footer__logo:focus svg {
+  transition: fill 0.3s;
+  fill: $color-accent;
 }
 
-.footer__logo:active .footer__logo-text {
+.footer__logo:active {
   opacity: 0.3;
 
-  & path {
+  & svg {
     fill: $color-main;
   }
 }
@@ -49,19 +53,6 @@
   width: 59px;
   height: 40px;
   margin-right: 12px;
-}
-
-.footer__logo-text {
-  width: 74px;
-  height: 23px;
-  transition: 
-              opacity 0.3s,
-              color 0.3s,
-              background-color 0.3s;
-
-  & path {
-    transition: fill 0.3s;
-  }
 }
 
 .footer__list {
@@ -121,25 +112,19 @@
   margin-left: 15px;
   width: 27px;
   height: 34px;
-}
-
-.footer__academy-link:hover .footer__academy-logo,
-.footer__academy-link:focus .footer__academy-logo {
-  & path {
-    fill: $color-main;
-  }
-}
-
-.footer__academy-link:hover .footer__academy-logo {
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.footer__academy-logo {
   transition: opacity 0.3s;
 
-  & path {
+  & svg {
+    fill: $color-accent;
     transition: fill 0.3s;
   }
+}
+
+.footer__academy-link:hover svg,
+.footer__academy-link:focus svg {
+  fill: $color-main;
+}
+
+.footer__academy-link:active {
+  opacity: 0.3;
 }
